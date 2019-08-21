@@ -1,0 +1,13 @@
+---
+  tasks:
+  - name: Create a non-root sudo user
+     user:
+      name: tada
+      password: tada123
+      groups: # Empty by default, here we give it some groups
+       - sudo
+      state: present
+      shell: /bin/bash       # Defaults to /bin/bash
+      system: no             # Defaults to no
+      createhome: yes        # Defaults to yes
+      home: /home/tada  # Defaults to /home/<username>
