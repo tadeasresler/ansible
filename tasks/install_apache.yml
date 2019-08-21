@@ -1,0 +1,14 @@
+---
+  - name: Install Apache Server
+    yum:
+     name: httpd
+     state: latest
+
+  - name: Ensure all necessary packages are installed
+    yum:
+      name: "{{ packages }}"
+      state: latest
+      vars:
+        packages:
+          - httpd
+          - httpd-tools
