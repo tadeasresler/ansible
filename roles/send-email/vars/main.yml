@@ -1,18 +1,4 @@
 ---
-
-mail_body:
-  subject: "Your MCC has been updated to version 5.15."
-  body: "<html><body><h1>To je skvělé. No není to skvělé?</h1></body></html>"
-
-mail_conf:
-  host: "smtp.gmail.com"
-  port: "587"
-  username: "no-reply@aura.cz"
-  password: "4%Jm1@$8;6-Fq9"
-  secure: "starttls"
-  from: "Automatic Notification [mccsupport@aura.cz]"
-  headers:
-  - 'Reply-To=mccsupport@aura.cz'
-  subtype: "html"
-
+- import_playbook: configuration.yml
 - import_playbook: recipients.yml
+- import_playbook: body_templates.yml
