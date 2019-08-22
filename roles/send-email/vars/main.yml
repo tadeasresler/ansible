@@ -16,7 +16,7 @@ mail_recipients:
   - "tadeas.resler@aura.cz"
   #- "tomas.maca@aura.cz"
   #- "frantisek.varacha@aura.cz"
-  
+
 mail_body:
-  subject: "Your MCC has been updated to version 5.15."
-  body: "<html><body><h1>To je skvělé. No není to skvělé?</h1></body></html>"
+   subject: "Your MCC has been updated to version {{version}}"
+   body: "<html><body><h1>Prvni email</h1></body></html>"
