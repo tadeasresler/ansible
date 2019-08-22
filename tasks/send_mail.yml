@@ -7,18 +7,18 @@
   tasks:
   - name: First emails
     mail:
-     host: "smtp.office365.com"
-     port: 587
-     username: "advosaurus@outlook.cz"
-     password: "advokatj2ee"
+     host: "smtp.seznam.cz"
+     port: 25
+     username: "advosaurus@seznam.cz"
+     password: "321Oknbhu"
      to: "tadeas.resler@aura.cz"
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "noreply@aura.cz"
-     secure: "starttls"
+     #secure: "starttls"
      timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
      #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
      #    charset: utf8
-    delegate_to: localhost
+    #delegate_to: localhost
