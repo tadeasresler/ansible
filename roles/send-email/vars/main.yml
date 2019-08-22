@@ -31,4 +31,4 @@ vars:
 
 tasks:
   - debug:
-      msg: "{{ (mail_body.subject|selectattr("ID", "contains", "1")|first).Text }}"
+      msg: "{{ (mail_body.subject|selectattr('ID', 'contains', '1')|first).Text }}"
