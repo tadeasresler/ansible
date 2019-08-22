@@ -8,7 +8,7 @@
   - name: First emails
     mail:
      host: "smtp.seznam.cz"
-     port: "465"
+     port: "25"
      username: "advosaurus@seznam.cz"
      password: "321Oknbhu"
      to: "tadeasresler@gmail.com"
