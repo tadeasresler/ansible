@@ -15,9 +15,4 @@ mail_conf:
   - 'Reply-To=mccsupport@aura.cz'
   subtype: "html"
 
-  #List of receivers (customers)
-mail_recipients:
-  to:
-  - "tadeas.resler@aura.cz"
-  #- "tomas.maca@aura.cz"
-  #- "frantisek.varacha@aura.cz"
+- import_playbook: recipients.yml
