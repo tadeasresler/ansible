@@ -19,7 +19,7 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ mail_body.subject | map(attribute='ID') }}" 
+    subject: "{{ mail_body.subject | list }}" 
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
