@@ -16,7 +16,7 @@
      #cc: "tomas.maca@aura.cz"
      subject: "Ansible-report"
      subtype: "html"
-     body: "Hello <b>Tomas<b>, this is the first e-mail in HTML format from ansible. I hope you like it ;-)"
+     body: "Hello <b>Tomas</b>, this is the first e-mail in HTML format from ansible. I hope you like it ;-)"
      from: "ansible@aura.cz"
      timeout: 30
      charset: "utf-8"
