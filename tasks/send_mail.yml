@@ -9,14 +9,14 @@
     mail:
      host: smtp.gmail.com
      port: 465
-     username: tadeas.resler@aura.cz
-     password: Np9H38O7q@rdbN#@
+     username: tadeasresler@gmail.com
+     password: c442acCGtoSgkPAL
      subject: Ansible-report
      body: Hello, this is an e-mail. I hope you like it ;-)
-     from: tadeas.resler@aura.cz
+     from: tadeasresler@gmail.com
      to: Tadeas Resler <tadeas.resler@aura.cz>
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
-     headers: 'Reply-To=john@example.com|X-Special="Something or other"'
+     headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
      charset: utf8
     delegate_to: localhost
