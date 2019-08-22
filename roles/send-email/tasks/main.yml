@@ -19,8 +19,8 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ subject }}"
-    when: "subject.when"
+    subject: "{{ item.subject }}"
+    when: "item.when"
     with_items:
       - { subject: mail_body.subject.0, when: "{{ templates == 1 }}" }
       - { subject: mail_body.subject.1, when: "{{ templates == 2 }}" }
