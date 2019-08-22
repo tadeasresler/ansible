@@ -19,7 +19,8 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ (mail_body.subject|selectattr('ID', 'contains', '1')) }}" 
+    - debug:
+     subject: "{{ (mail_body.subject|selectattr('ID', 'contains', '1')) }}" 
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
