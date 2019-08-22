@@ -2,9 +2,9 @@
 
 - name: Ports and services settings
   gather_facts: false
-  hosts: all
   tasks:
-
-   - firewalld:
-     permanent: true
-     state: enabled
+  - name: Enabling Ports
+    firewalld:
+      port: 443/tcp
+      permanent: true
+      state: enabled
