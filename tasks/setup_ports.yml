@@ -1,5 +1,11 @@
 ---
-  - firewalld:
-    service: https
-    permanent: true
-    state: enabled
+
+- name: Ports and services settings
+  gather_facts: false
+  hosts: all
+  tasks:
+
+   - firewalld:
+     service: https
+     permanent: true
+     state: enabled
