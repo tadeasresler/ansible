@@ -19,11 +19,11 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ mail_body.subject | selectattr(ID, 1) }}" 
+    subject: "{{ mail_body.subject }}"
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
-    port: "{{ mail_conf.port | default (omit) }}"
+    port: "{{ mail_conf.port | default(omit) }}"
     username: "{{ mail_conf.username | default(omit) }}"
     password: "{{ mail_conf.password | default(omit) }}"
     to: "{{ mail_recipients.to | default(omit) }}"
