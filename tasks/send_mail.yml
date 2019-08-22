@@ -1,21 +1,21 @@
 ---
 
 - name: Sending an information email to customer
-  gather_facts: true
+  gather_facts: no
   hosts: localhost
 
   tasks:
   - name: First emails
     mail:
      host: "smtp.seznam.cz"
-     port: 465
+     port: "465"
      username: "advosaurus@seznam.cz"
      password: "321Oknbhu"
      to: "tadeas.resler@aura.cz"
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "advosaurus@seznam.cz"
-     secure: "always"
+     secure: "try"
      timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
