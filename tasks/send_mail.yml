@@ -8,7 +8,9 @@
   - name: First emails
     mail:
      host: smtp.gmail.com
-     port: 25
+     port: 465
+     username: tadeas.resler@aura.cz
+     password: Np9H38O7q@rdbN#@
      subject: Ansible-report
      body: Hello, this is an e-mail. I hope you like it ;-)
      from: tadeas.resler@aura.cz
