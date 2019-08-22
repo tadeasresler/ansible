@@ -16,8 +16,8 @@
      subtype: "plain"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "advosaurus@seznam.cz"
-     secure: "always"
-     timeout: 300
+     timeout: 60
+     charset: "utf-8"
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
      #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
