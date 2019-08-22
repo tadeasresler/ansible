@@ -18,5 +18,9 @@ mail_recipients:
   #- "frantisek.varacha@aura.cz"
 
 mail_body:
-   subject: "Your MCC has been updated to version {{version}}"
-   body: "<html><body><h1>Prvni email</h1></body></html>"
+  1:
+   subject: "First, Your MCC has been updated to version {{version}}"
+   body: "<html><body>That's perfect!</body></html>"
+  2:
+   subject: "Second, Your MCC has been updated to version {{version}}"
+   body: "<html><body>That's perfect!</body></html>"
