@@ -11,7 +11,7 @@
      port: 587
      username: "tadeasresler@gmail.com"
      password: "tgyxpivfbkmilrux"
-     to: "Tadeas Resler <tadeas.resler@aura.cz>"
+     to: "tadeas.resler@aura.cz"
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "tadeasresler@gmail.com"
