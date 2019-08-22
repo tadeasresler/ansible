@@ -15,7 +15,8 @@
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "tadeas.resler@aura.cz"
-     secure: starttls
+     secure: "starttls"
+     timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
      #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
