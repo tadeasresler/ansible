@@ -3,7 +3,7 @@
   gather_facts: false
   hosts: all
   tasks:
-    - name: First email
+    - name: First emails
         mail:
         host: smtp.gmail.com
         port: 25
