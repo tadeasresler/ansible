@@ -1,12 +1,5 @@
 ---
   - firewalld:
-    service:
-      - https
-      - http
-      - ftps
-    port:
-      - 80/tcp
-      - 443/tcp
-      - 9392/tcp
+    service: https
     permanent: true
     state: enabled
