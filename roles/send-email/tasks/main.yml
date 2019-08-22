@@ -19,7 +19,9 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ mail_body.subject | selectattr(ip) }}"
+    - debug:
+      subject: "{{ mail_body.subject.id.1}}"
+    when: template1 is defined  
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"

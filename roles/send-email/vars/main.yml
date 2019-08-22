@@ -19,8 +19,10 @@
 
  mail_body:
     subject:
-      - { id: 1, text: "First, Your MCC has been updated to version {{version}}" }
-      - { id: 2, text: "First, Your MCC has been updated to version {{version}}" }
+      - ID: "1"
+        Text: "First, Your MCC has been updated to version {{version}}" }
+      - ID: "2"
+        Text: "First, Your MCC has been updated to version {{version}}" }
     body: "<html><body>That's perfect!</body></html>"
    # 2:
    #  subject: "Second, Your MCC has been updated to version {{version}}"
