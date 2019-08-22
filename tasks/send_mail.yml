@@ -7,7 +7,7 @@
   tasks:
   - name: First emails
     mail:
-     host: "smtp.gmail.com"
+     host: "mail.aura.cz"
      port: 587
      username: "tadeas.resler@aura.cz"
      password: "Np9H38O7q@rdbN#@"
