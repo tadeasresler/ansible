@@ -5,14 +5,14 @@
   tasks:
     - name: First emails
       mail:
-      host: smtp.gmail.com
-      port: 25
-      subject: Ansible-report
-      body: Hello, this is an e-mail. I hope you like it ;-)
-      from: jane@example.net (Jane Jolie)
-      to: Tadeas Resler <tadeas.resler@aura.cz>
-  #    cc: Tomas Maca <tomas.maca@aura.cz>
-  #    attach: /etc/
-      headers: 'Reply-To=john@example.com|X-Special="Something or other"'
-      charset: utf8
+        host: smtp.gmail.com
+        port: 25
+        subject: Ansible-report
+        body: Hello, this is an e-mail. I hope you like it ;-)
+        from: jane@example.net (Jane Jolie)
+        to: Tadeas Resler <tadeas.resler@aura.cz>
+    #    cc: Tomas Maca <tomas.maca@aura.cz>
+    #    attach: /etc/
+        headers: 'Reply-To=john@example.com|X-Special="Something or other"'
+        charset: utf8
 # delegate_to: localhost
