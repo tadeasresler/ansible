@@ -1,6 +1,6 @@
 ---
 
-mail:
+mail_conf:
   host: "smtp.gmail.com"
   port: "587"
   username: "no-reply@aura.cz"

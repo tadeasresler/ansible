@@ -19,19 +19,19 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ mail.subject }}"
-    body: "{{ mail.body | default(omit) }}"
-    host: "{{ mail.host | default(omit) }}"
-    port: "{{ mail.port | default (omit) }}"
-    username: "{{ mail.username | default(omit) }}"
-    password: "{{ mail.password | default(omit) }}"
-    to: "{{ mail.to | default(omit) }}"
-    cc: "{{ mail.cc | default(omit) }}"
-    bcc: "{{ mail.bcc | default(omit) }}"
-    from: "{{ mail.from | default(omit)}}"
-    headers: "{{ mail.headers | default(omit)}}"
-    secure: "{{ mail.secure | default(omit) }}"
-    subtype: "{{ mail.subtype | default(omit) }}"
+    subject: "{{ mail_body.subject }}"
+    body: "{{ mail_body.body | default(omit) }}"
+    host: "{{ mail_conf.host | default(omit) }}"
+    port: "{{ mail_conf.port | default (omit) }}"
+    username: "{{ mail_conf.username | default(omit) }}"
+    password: "{{ mail_conf.password | default(omit) }}"
+    to: "{{ mail_recipients.to | default(omit) }}"
+    cc: "{{ mail_conf.cc | default(omit) }}"
+    bcc: "{{ mail_conf.bcc | default(omit) }}"
+    from: "{{ mail_conf.from | default(omit)}}"
+    headers: "{{ mail_conf.headers | default(omit)}}"
+    secure: "{{ mail_conf.secure | default(omit) }}"
+    subtype: "{{ mail_conf.subtype | default(omit) }}"
 
 # - name: Sending an information email to customer
 #   gather_facts: no

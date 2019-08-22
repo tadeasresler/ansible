@@ -1,5 +1,5 @@
 ---
 
-mail:
+mail_body:
   subject: "Your MCC has been updated to version 5.15."
   body: "<html><body><h1>To je skvělé. No není to skvělé?</h1></body></html>"
