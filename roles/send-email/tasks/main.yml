@@ -19,7 +19,7 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ mail_body.subject.1 }}"
+    subject: "{{ (mail_body.subject).templates }}"
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
