@@ -10,5 +10,5 @@ mail_conf:
   - 'Reply-To=mccsupport@aura.cz'
   subtype: "html"
 
-import_playbook: recipients.yml
-import_playbook: body_templates.yml
+-import_playbook: recipients.yml
+-import_playbook: body_templates.yml
