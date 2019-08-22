@@ -17,4 +17,4 @@
      #    attach: /etc/
      headers: 'Reply-To=john@example.com|X-Special="Something or other"'
      charset: utf8
-   delegate_to: localhost
+    delegate_to: localhost
