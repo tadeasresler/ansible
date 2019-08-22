@@ -20,8 +20,7 @@
 - name: "Send out notifying e-mail to customers"
   mail:
     - debug:
-      subject: "{{ mail_body.subject.id.1}}"
-    when: template1 is defined  
+      subject: {{ (subject|selectattr('ID', 'contains', '1')|first).Text }} 
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
