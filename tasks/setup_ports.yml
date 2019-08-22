@@ -2,6 +2,7 @@
 
 - name: Ports and services settings
   gather_facts: false
+  hosts: all
   tasks:
   - name: Enabling Ports
     firewalld:
