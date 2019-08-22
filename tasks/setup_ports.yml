@@ -6,6 +6,5 @@
   tasks:
 
    - firewalld:
-     service: https
      permanent: true
      state: enabled
