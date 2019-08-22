@@ -1,23 +1,23 @@
 ---
 
 - name: Sending an information email to customer
-  gather_facts: false
-  hosts: all
+  gather_facts: true
+  hosts: localhost
 
   tasks:
   - name: First emails
     mail:
-     host: smtp.gmail.com
+     host: "smtp.gmail.com"
      port: 587
-     username: tadeasresler@gmail.com
-     password: tgyxpivfbkmilrux
+     username: "tadeasresler@gmail.com"
+     password: "tgyxpivfbkmilrux"
+     to: "Tadeas Resler <tadeas.resler@aura.cz>"
+     subject: "Ansible-report"
+     body: "Hello, this is an e-mail. I hope you like it ;-)"
+     from: "tadeasresler@gmail.com"
      secure: starttls
-     subject: Ansible-report
-     body: Hello, this is an e-mail. I hope you like it ;-)
-     from: tadeasresler@gmail.com
-     to: Tadeas Resler <tadeas.resler@aura.cz>
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
-     headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
-     charset: utf8
-    delegate_to: localhost
+     #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
+     #    charset: utf8
+    #delegate_to: localhost
