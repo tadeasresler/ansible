@@ -1,27 +1,28 @@
 ---
-mail_conf:
-  host: "smtp.gmail.com"
-  port: "587"
-  username: "no-reply@aura.cz"
-  password: "4%Jm1@$8;6-Fq9"
-  secure: "starttls"
-  from: "Automatic Notification [mccsupport@aura.cz]"
-  headers:
-  - 'Reply-To=mccsupport@aura.cz'
-  subtype: "html"
+vars:
+ mail_conf:
+   host: "smtp.gmail.com"
+   port: "587"
+   username: "no-reply@aura.cz"
+   password: "4%Jm1@$8;6-Fq9"
+   secure: "starttls"
+   from: "Automatic Notification [mccsupport@aura.cz]"
+   headers:
+   - 'Reply-To=mccsupport@aura.cz'
+   subtype: "html"
 
-#List of receivers (customers)
-mail_recipients:
-  to:
-  - "tadeas.resler@aura.cz"
-  #- "tomas.maca@aura.cz"
-  #- "frantisek.varacha@aura.cz"
+ #List of receivers (customers)
+ mail_recipients:
+   to:
+   - "tadeas.resler@aura.cz"
+   #- "tomas.maca@aura.cz"
+   #- "frantisek.varacha@aura.cz"
 
-mail_body:
-   subject:
-     - "First, Your MCC has been updated to version {{version}}"
-     - "Test 2"
-   body: "<html><body>That's perfect!</body></html>"
-  # 2:
-  #  subject: "Second, Your MCC has been updated to version {{version}}"
-  #  body: "<html><body>That's perfect!</body></html>"
+ mail_body:
+    subject:
+      - "First, Your MCC has been updated to version {{version}}"
+      - "Test 2"
+    body: "<html><body>That's perfect!</body></html>"
+   # 2:
+   #  subject: "Second, Your MCC has been updated to version {{version}}"
+   #  body: "<html><body>That's perfect!</body></html>"
