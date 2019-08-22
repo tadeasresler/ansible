@@ -19,7 +19,7 @@
 
 - name: "Send out notifying e-mail to customers"
   mail:
-    subject: "{{ if templates == 1 mail_body.subject.1 else mail_body.subject.0 }}"
+    subject: "{{ mail_body.subject.1 if templates == 1 else mail_body.subject.0 }}"
     body: "{{ mail_body.body }}"
     #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
