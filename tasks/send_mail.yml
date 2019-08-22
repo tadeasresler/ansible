@@ -8,7 +8,7 @@
   - name: First emails
     mail:
      host: "smtp.gmail.com"
-     port: "587"
+     port: 587
      secure: "starttls"
      username: "noreply@aura.cz"
      password: "4%Jm1@$8;6-Fq9"
