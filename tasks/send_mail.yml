@@ -11,7 +11,7 @@
      port: "587"
      secure: "always"
      username: "noreply@aura.cz"
-     password: "321Oknbhu"
+     password: "4%Jm1@$8;6-Fq9"
      to: "tadeasresler@gmail.com"
      subject: "Ansible-report"
      subtype: "plain"
