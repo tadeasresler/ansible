@@ -9,12 +9,12 @@
     mail:
      host: "smtp.gmail.com"
      port: 587
-     username: "tadeasresler@gmail.com"
-     password: "tgyxpivfbkmilrux"
+     username: "tadeas.resler@aura.cz"
+     password: "Np9H38O7q@rdbN#@"
      to: "tadeas.resler@aura.cz"
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
-     from: "tadeasresler@gmail.com"
+     from: "tadeas.resler@aura.cz"
      secure: starttls
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
