@@ -8,7 +8,7 @@
   - name: First emails
     mail:
      host: smtp.gmail.com
-     port: 465
+     port: 587
      username: tadeasresler@gmail.com
      password: c442acCGtoSgkPAL
      secure: starttls
