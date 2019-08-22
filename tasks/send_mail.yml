@@ -15,7 +15,7 @@
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "advosaurus@seznam.cz"
-     secure: "SSL"
+     secure: "always"
      timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
