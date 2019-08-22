@@ -11,6 +11,7 @@
      port: 465
      username: tadeasresler@gmail.com
      password: c442acCGtoSgkPAL
+     secure: always
      subject: Ansible-report
      body: Hello, this is an e-mail. I hope you like it ;-)
      from: tadeasresler@gmail.com
