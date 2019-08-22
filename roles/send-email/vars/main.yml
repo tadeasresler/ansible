@@ -1,4 +1,3 @@
----
 - import_playbook: configuration.yml
 - import_playbook: recipients.yml
 - import_playbook: body_templates.yml
