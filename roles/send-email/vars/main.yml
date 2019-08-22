@@ -19,10 +19,9 @@
    #- "frantisek.varacha@aura.cz"
 
  mail_body:
-    subject: "1"
-        - "First, Your MCC has been updated to version {{version}}"
-    subject: "2"
-        - "Second, Your MCC has been updated to version {{version}}"
+    subject:
+       1: "First, Your MCC has been updated to version {{version}}"
+       2: "Second, Your MCC has been updated to version {{version}}"
     body: "<html><body>That's perfect!</body></html>"
    # 2:
    #  subject: "Second, Your MCC has been updated to version {{version}}"
