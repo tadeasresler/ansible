@@ -9,7 +9,7 @@
     mail:
      host: "smtp.gmail.com"
      port: "587"
-     secure: "always"
+     secure: "try"
      username: "noreply@aura.cz"
      password: "4%Jm1@$8;6-Fq9"
      to: "tadeasresler@gmail.com"
