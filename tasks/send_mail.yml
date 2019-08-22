@@ -11,11 +11,12 @@
      port: "465"
      username: "advosaurus@seznam.cz"
      password: "321Oknbhu"
-     to: "tadeas.resler@aura.cz"
+     to: "tadeasresler@gmail.com"
      subject: "Ansible-report"
+     subtype: "plain"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "advosaurus@seznam.cz"
-     secure: "try"
+     secure: "always"
      timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
