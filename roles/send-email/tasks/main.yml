@@ -20,7 +20,8 @@
 - name: "Send out notifying e-mail to customers"
   mail:
     subject: "{{ mail_body.subject }}"
-    body: "{{ mail_body.body | default(omit) }}"
+    body: "{{ {"test1":1, test2:2"}[template] | default("2") }}"
+    #body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
     port: "{{ mail_conf.port | default (omit) }}"
     username: "{{ mail_conf.username | default(omit) }}"

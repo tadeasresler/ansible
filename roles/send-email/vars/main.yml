@@ -18,11 +18,9 @@ mail_recipients:
   #- "frantisek.varacha@aura.cz"
 
 mail_body:
+  1:
    subject: "First, Your MCC has been updated to version {{version}}"
    body: "<html><body>That's perfect!</body></html>"
-when: template == 1
-
-mail_body:
+  2:
    subject: "Second, Your MCC has been updated to version {{version}}"
    body: "<html><body>That's perfect!</body></html>"
-when: template == 2
