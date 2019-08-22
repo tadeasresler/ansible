@@ -1,4 +1,4 @@
----
-- import_playbook: send-email/configuration.yml
-- import_playbook: send-email/recipients.yml
-- import_playbook: send-email/body_templates.yml
+# ---
+# - import_playbook: send-email/configuration.yml
+# - import_playbook: send-email/recipients.yml
+# - import_playbook: send-email/body_templates.yml
