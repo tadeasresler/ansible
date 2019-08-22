@@ -1,0 +1,16 @@
+---
+
+mail:
+  host: "smtp.gmail.com"
+  port: "587"
+  username: "no-reply@aura.cz"
+  password: "4%Jm1@$8;6-Fq9"
+  secure: "starttls"
+  headers:
+  - 'Reply-To=devops@aura.cz'
+  to:
+  - "tadeas.resler@aura.cz" #List of receivers (cutomers)
+  #- "person2@example.com"
+  subject: "Test Subject"
+  body: "<html><body><h1>This is a H1 header test</h1></body></html>"
+  subtype: "html"
