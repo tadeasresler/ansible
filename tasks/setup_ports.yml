@@ -6,8 +6,7 @@
   tasks:
   - name: Enabling Ports
     firewalld:
-      port:
-        - 443/tcp
-        - 80/tcp      
+      port: 443/tcp
+      port: 443/tcp
       permanent: true
       state: enabled
