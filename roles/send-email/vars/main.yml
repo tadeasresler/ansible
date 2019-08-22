@@ -1,5 +1,5 @@
 ---
-  
+
  mail_conf:
    host: "smtp.gmail.com"
    port: "587"
@@ -28,7 +28,3 @@
    # 2:
    #  subject: "Second, Your MCC has been updated to version {{version}}"
    #  body: "<html><body>That's perfect!</body></html>"
-
-tasks:
-  - debug:
-      msg: "{{ (mail_body.subject|selectattr('ID', 'contains', '1')|first).Text }}"
