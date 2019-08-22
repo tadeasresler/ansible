@@ -7,16 +7,17 @@
   tasks:
   - name: First emails
     mail:
-     host: "smtp.seznam.cz"
-     port: "25"
-     username: "advosaurus@seznam.cz"
+     host: "smtp.gmail.com"
+     port: "587"
+     secure: "always"
+     username: "noreply@aura.cz"
      password: "321Oknbhu"
      to: "tadeasresler@gmail.com"
      subject: "Ansible-report"
      subtype: "plain"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
-     from: "advosaurus@seznam.cz"
-     timeout: 60
+     from: "ansible@aura.cz"
+     timeout: 30
      charset: "utf-8"
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
