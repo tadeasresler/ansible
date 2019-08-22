@@ -1,4 +1,7 @@
 ---
+- import_playbook: recipients.yml
+- import_playbook: body_templates.yml
+
 mail_conf:
   host: "smtp.gmail.com"
   port: "587"
