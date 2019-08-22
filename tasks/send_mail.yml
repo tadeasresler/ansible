@@ -15,10 +15,10 @@
      subject: "Ansible-report"
      body: "Hello, this is an e-mail. I hope you like it ;-)"
      from: "advosaurus@seznam.cz"
-     secure: "starttls"
+     secure: "SSL"
      timeout: 300
      #    cc: Tomas Maca <tomas.maca@aura.cz>
      #    attach: /etc/
      #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
      #    charset: utf8
-    #delegate_to: localhost
+  delegate_to: localhost
