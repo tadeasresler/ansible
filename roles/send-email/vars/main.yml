@@ -1,20 +1,15 @@
 ---
 
- mail_conf:
+ mail:
    host: "smtp.gmail.com"
    port: "587"
    username: "no-reply@aura.cz"
    password: "4%Jm1@$8;6-Fq9"
    secure: "starttls"
-   from: "Automatic Notification [mccsupport@aura.cz]"
+   from: "Automatic Notification [no-reply@aura.cz]"
    headers:
-   - 'Reply-To=mccsupport@aura.cz'
+   - 'Reply-To=aura@aura.cz' # possibly change
    subtype: "html"
-
- #List of receivers (customers)
- mail_recipients:
-   to: "{{ recipients }}"
-
- mail_body:
-    subject: "{{ subject }}"
-    body: "{{ lookup('file', '/etc/ansible/templates/emails/main_template.html') }}"
+   to: "{{ recipients }}" #List of receivers (customers)
+   subject: "{{ subject }}"
+   body: "{{ lookup('file', '/etc/ansible/templates/emails/main_template.html') }}"

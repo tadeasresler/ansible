@@ -1,25 +1,9 @@
 ---
+#Import check.yml
 - import_tasks: checks.yml
 
-# - name: "Create the 'To:' list of addresses"
-#   set_fact:
-#     mail: "{{ mail | combine({ 'to': list_of_mail_to }) }}"
-#   when:
-#   - list_of_mail_to is defined
-#
-# - name: "Create the 'CC:' list of addresses"
-#   set_fact:
-#     mail: "{{ mail | combine({ 'cc': list_of_mail_cc }) }}"
-#   when:
-#   - list_of_mail_cc is defined
-#
-# - name: "Create the 'BCC:' list of addresses"
-#   set_fact:
-#     mail: "{{ mail | combine({ 'bcc': list_of_mail_bcc }) }}"
-#   when:
-#   - list_of_mail_bcc is defined
-
 #In case you want to send 'New version of MCC installed' email set "temp_type" on 2 in extra vars
+#Copying template for New version of MCC installed email to the main_template which is to be sent
 - name: Create an email template "New version of MCC installed"
   copy:
     content: "New version of MCC installed"
@@ -27,56 +11,35 @@
   when: temp_type is defined and temp_type == "1"
 
 #In case you want to send 'Docker update availability email' set "temp_type" on 2 in extra vars
+#Copying template for docker update availability email to the main_template which is to be sent
 - name: Create an email template "New Docker update available"
   copy:
     content: "New Docker update available"
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "2"
 
+#In case no template choosen you have to specify at least message in extra vars
+#Copying extra var 'message' to the main_template which is to be send
 - name: Create an email without template
   copy:
     content: "{{ message }}"
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is not defined or ()
 
-- name: "Send out notifying e-mail to customers"
+#Structure of the notifying emails
+#Sending out the emails
+- name: "Sending notifying e-mails"
   mail:
-    subject: "{{ mail_body.subject }}"
-    body: "{{ mail_body.body | default(omit) }}"
-    host: "{{ mail_conf.host | default(omit) }}"
-    port: "{{ mail_conf.port | default(omit) }}"
-    username: "{{ mail_conf.username | default(omit) }}"
-    password: "{{ mail_conf.password | default(omit) }}"
-    to: "{{ mail_recipients.to | default(omit) }}"
-    cc: "{{ mail_conf.cc | default(omit) }}"
-    bcc: "{{ mail_conf.bcc | default(omit) }}"
-    from: "{{ mail_conf.from | default(omit)}}"
-    headers: "{{ mail_conf.headers | default(omit)}}"
-    secure: "{{ mail_conf.secure | default(omit) }}"
-    subtype: "{{ mail_conf.subtype | default(omit) }}"
-
-# - name: Sending an information email to customer
-#   gather_facts: no
-#   hosts: localhost
-#
-#   tasks:
-#   - name: First emails
-#     mail:
-#      host: "smtp.gmail.com"
-#      port: 587
-#      secure: "starttls"
-#      username: "no-reply@aura.cz"
-#      password: "4%Jm1@$8;6-Fq9"
-#      to: "tadeas.resler@aura.cz"
-#      #cc: "tomas.maca@aura.cz"
-#      subject: "Ansible-report"
-#      subtype: "html"
-#      body: "Hello <b>Tomas</b>, this is the first e-mail in HTML format from ansible. I hope you like it ;-)"
-#      from: "ansible@aura.cz"
-#      timeout: 30
-#      charset: "utf-8"
-     #    cc: Tomas Maca <tomas.maca@aura.cz>
-     #    attach: /etc/
-     #    headers: 'Reply-To=tadeasresler@gmail.com|X-Special="Something or other"'
-     #    charset: utf8
-    #delegate_to: localhost
+    subject: "{{ mail.subject }}"
+    body: "{{ mail.body | default(omit) }}"
+    host: "{{ mail.host | default(omit) }}"
+    port: "{{ mail.port | default(omit) }}"
+    username: "{{ mail.username | default(omit) }}"
+    password: "{{ mail.password | default(omit) }}"
+    to: "{{ mail.to | default(omit) }}"
+    cc: "{{ mail.cc | default(omit) }}"
+    bcc: "{{ mail.bcc | default(omit) }}"
+    from: "{{ mail.from | default(omit)}}"
+    headers: "{{ mail.headers | default(omit)}}"
+    secure: "{{ mail.secure | default(omit) }}"
+    subtype: "{{ mail.subtype | default(omit) }}"

@@ -9,14 +9,19 @@
 - name: Message check
   fail:
     msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or temp_type='1'"
-  when: temp_type is not defined and message is not defined
+  when:
+    temp_type is not defined and
+    message is not defined
 
 - name: Recipients check
   fail:
     msg: "ERROR: At least one recipient must by defined in extra vars! eg.: recipients='devops@aura.cz'"
-  when: recipients is not defined and recipients !=""
+  when:
+    recipients is not defined and
+    recipients !=""
 
 - name: Subject check
   fail:
     msg: "ERROR: Subject of the message must be defined in extra vars! eg.: subject='New version arrival!'"
-  when: subject is not defined
+  when:
+    subject is not defined
