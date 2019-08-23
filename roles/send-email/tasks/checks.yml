@@ -2,7 +2,9 @@
 - name: Template check
   fail:
     msg: "ERROR: Template number: {{ temp_type }} doesn't exist or it's not defined!"
-  when: temp_type is defined and temp_type not in ['1', '2']
+  when:
+    - temp_type is defined and
+    - temp_type not in [1, 2]
 
 - name: Message check
   fail:
