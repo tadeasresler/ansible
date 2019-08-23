@@ -31,8 +31,8 @@
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "2"
 
-- name: Error message
-    msg: 'ERROR: Template number: {{ temp_type }} doesn't exist!'
+- fail: Error message
+    msg: "ERROR: Template number: {{ temp_type }} doesn't exist!"
   when: temp_type is defined and temp_type != 1 and temp_type != 2
 
 - name: Create an email without template
