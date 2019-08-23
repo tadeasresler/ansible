@@ -26,13 +26,13 @@
 - name: Create an email template "New Docker update available"
   copy:
     content: "New Docker update available"
-    dest: /etc/ansible/templates/emails/new_version.html
+    dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "2"
 
 - name: Create an email without template
   copy:
     content: "{{ message }}"
-    dest: /etc/ansible/templates/emails/new_version.html
+    dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is not defined
 
 - name: "Send out notifying e-mail to customers"

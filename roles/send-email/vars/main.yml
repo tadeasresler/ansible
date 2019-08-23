@@ -13,12 +13,8 @@
 
  #List of receivers (customers)
  mail_recipients:
-   to:
-   - "tadeas.resler@aura.cz"
-   #- "tomas.maca@aura.cz"
-   #- "frantisek.varacha@aura.cz"
+   to: "{{ recipients }}"
 
  mail_body:
-    with_items:
     subject: "{{ subject }}"
-    body: "{{ lookup('file', '/etc/ansible/templates/emails/new_version.html') }}"
+    body: "{{ lookup('file', '/etc/ansible/templates/emails/main_template.html') }}"
