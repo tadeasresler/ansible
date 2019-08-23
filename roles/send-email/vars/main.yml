@@ -12,4 +12,4 @@
    subtype: "html"
    to: "{{ recipients }}" #List of receivers (customers)
    subject: "{{ subject }}"
-   body: "{{ lookup('file', 'templates/main_template.html') }}"
+   body: "{{ lookup('file', './templates/main_template.html') }}"
