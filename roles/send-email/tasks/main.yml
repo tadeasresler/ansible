@@ -18,10 +18,10 @@
   - list_of_mail_bcc is defined
 
  - name: Create an email template file
- - template:
+   template:
         src: "Ahoj všem"
         dest: /etc/ansible/templates/emails/new_version.html
-  when: templates == 1
+   when: templates == 1
 
 - name: "Send out notifying e-mail to customers"
   mail:
