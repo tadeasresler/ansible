@@ -18,8 +18,8 @@
   - list_of_mail_bcc is defined
 
 - name: Create an email template file
-  template:
-    src: "Ahoj všem"
+  copy:
+    content: "Test vlozeni<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
   when: templates is defined
 
