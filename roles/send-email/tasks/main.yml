@@ -12,7 +12,7 @@
 - name: Recipients check
   fail:
     msg: "ERROR: At least one recipient must by defined in extra vars! eg.: recipients='devops@aura.cz'"
-  when: temp_type is not defined and message is not defined
+  when: recipients is not defined and recipients !=""
 
 - name: Subject check
   fail:
