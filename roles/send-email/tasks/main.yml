@@ -33,7 +33,7 @@
 
 - name: Fail if template doesn't exist
   fail:
-    msg: ERROR: Template number: {{ temp_type }} doesn't exist!
+    msg: "ERROR: Template number: {{ temp_type }} doesn't exist!"
   when: temp_type is defined and temp_type != 1 and temp_type != 2
 
 - name: Create an email without template
