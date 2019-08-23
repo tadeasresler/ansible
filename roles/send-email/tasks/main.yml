@@ -17,17 +17,23 @@
   when:
   - list_of_mail_bcc is defined
 
-- name: Create an email template 1
+- name: Create an email template "New version of MCC installed"
   copy:
-    content: "Test vlozeni 1<br><br>"
-    dest: /etc/ansible/templates/emails/new_version.html
+    content: "New version of MCC installed"
+    dest: /etc/ansible/templates/emails/n.html
   when: temp_type == "1"
 
-- name: Create an email template 2
+- name: Create an email template "New Docker update available"
   copy:
-    content: "Test vlozeni 2<br><br>"
+    content: "New Docker update available"
     dest: /etc/ansible/templates/emails/new_version.html
   when: temp_type == "2"
+
+- name: Create an email without template
+  copy:
+    content: "{{ message }}"
+    dest: /etc/ansible/templates/emails/new_version.html
+  when: temp_type is not defined
 
 - name: "Send out notifying e-mail to customers"
   mail:
