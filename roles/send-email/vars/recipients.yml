@@ -1,6 +1,0 @@
-#List of receivers (customers)
-mail_recipients:
-  to:
-  - "tadeas.resler@aura.cz"
-  #- "tomas.maca@aura.cz"
-  #- "frantisek.varacha@aura.cz"
