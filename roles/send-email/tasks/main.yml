@@ -21,13 +21,13 @@
   copy:
     content: "Test vlozeni 1<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
-  when: templates == 1
+  when: templates1 is defined
 
 - name: Create an email template 2
   copy:
     content: "Test vlozeni 2<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
-  when: templates == 2
+  when: templates2 is defined
 
 - name: "Send out notifying e-mail to customers"
   mail:
