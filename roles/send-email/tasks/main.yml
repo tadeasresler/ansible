@@ -5,16 +5,16 @@
 #In case you want to send 'New version of MCC installed' email set "temp_type" on 2 in extra vars
 #Copying template for New version of MCC installed email to the main_template which is to be sent
 - name: Create an email template "New version of MCC installed"
-  copy:
-    content: "New version of MCC installed"
+  template:
+    src: /etc/ansible/templates/emails/new_version_mcc.html
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "1"
 
 #In case you want to send 'Docker update availability email' set "temp_type" on 2 in extra vars
 #Copying template for docker update availability email to the main_template which is to be sent
 - name: Create an email template "New Docker update available"
-  copy:
-    content: "New Docker update available"
+  template:
+    src: /etc/ansible/templates/emails/docker_update_available.html
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "2"
 
