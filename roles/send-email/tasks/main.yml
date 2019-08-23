@@ -21,7 +21,7 @@
   template:
     src: "Ahoj všem"
     dest: /etc/ansible/templates/emails/new_version.html
-  when: templates == 1
+  when: templates is defined
 
 - name: "Send out notifying e-mail to customers"
   mail:
