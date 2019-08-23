@@ -1,23 +1,23 @@
 ---
 - import_tasks: checks.yml
 
-- name: "Create the 'To:' list of addresses"
-  set_fact:
-    mail: "{{ mail | combine({ 'to': list_of_mail_to }) }}"
-  when:
-  - list_of_mail_to is defined
-
-- name: "Create the 'CC:' list of addresses"
-  set_fact:
-    mail: "{{ mail | combine({ 'cc': list_of_mail_cc }) }}"
-  when:
-  - list_of_mail_cc is defined
-
-- name: "Create the 'BCC:' list of addresses"
-  set_fact:
-    mail: "{{ mail | combine({ 'bcc': list_of_mail_bcc }) }}"
-  when:
-  - list_of_mail_bcc is defined
+# - name: "Create the 'To:' list of addresses"
+#   set_fact:
+#     mail: "{{ mail | combine({ 'to': list_of_mail_to }) }}"
+#   when:
+#   - list_of_mail_to is defined
+#
+# - name: "Create the 'CC:' list of addresses"
+#   set_fact:
+#     mail: "{{ mail | combine({ 'cc': list_of_mail_cc }) }}"
+#   when:
+#   - list_of_mail_cc is defined
+#
+# - name: "Create the 'BCC:' list of addresses"
+#   set_fact:
+#     mail: "{{ mail | combine({ 'bcc': list_of_mail_bcc }) }}"
+#   when:
+#   - list_of_mail_bcc is defined
 
 #In case you want to send 'New version of MCC installed' email set "temp_type" on 2 in extra vars
 - name: Create an email template "New version of MCC installed"
