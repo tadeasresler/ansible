@@ -17,11 +17,13 @@
   when:
   - list_of_mail_bcc is defined
 
-- name: Create an email template file
+- name: Create an email template 1
   copy:
     content: "Test vlozeni 1<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
   when: templates == 1
+
+- name: Create an email template 2
   copy:
     content: "Test vlozeni 2<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
