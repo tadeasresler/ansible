@@ -8,7 +8,7 @@
    secure: "starttls"
    from: "Automatic Notification [no-reply@aura.cz]"
    headers:
-   - 'Reply-To=aura@aura.cz' # possibly change
+   - 'Reply-To=aura@aura.cz' # Possibly to be changed
    subtype: "html"
    to: "{{ recipients }}" #List of receivers (customers)
    subject: "{{ subject }}"
