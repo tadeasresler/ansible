@@ -21,13 +21,13 @@
   copy:
     content: "New version of MCC installed"
     dest: /etc/ansible/templates/emails/n.html
-  when: temp_type == "1"
+  when: temp_type is defined and temp_type == "1"
 
 - name: Create an email template "New Docker update available"
   copy:
     content: "New Docker update available"
     dest: /etc/ansible/templates/emails/new_version.html
-  when: temp_type == "2"
+  when: temp_type is defined and temp_type == "2"
 
 - name: Create an email without template
   copy:
