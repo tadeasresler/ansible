@@ -17,11 +17,16 @@
   when:
   - list_of_mail_bcc is defined
 
+ - name: Create an email template file
+ - template:
+        src: "Ahoj všem"
+        dest: /etc/ansible/templates/emails/new_version.html
+  when: templates == 1
+
 - name: "Send out notifying e-mail to customers"
   mail:
     subject: "{{ mail_body.subject }}"
-    body: "{{ mail_body.body }}"
-    #body: "{{ mail_body.body | default(omit) }}"
+    body: "{{ mail_body.body | default(omit) }}"
     host: "{{ mail_conf.host | default(omit) }}"
     port: "{{ mail_conf.port | default(omit) }}"
     username: "{{ mail_conf.username | default(omit) }}"
