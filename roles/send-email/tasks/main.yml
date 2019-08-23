@@ -1,4 +1,9 @@
 ---
+- name: Fail if template doesn't exist
+  fail:
+    msg: "ERROR: Template number: {{ temp_type }} doesn't exist!"
+  when: temp_type is defined and temp_type != 1 and temp_type != 2
+  
 - name: "Create the 'To:' list of addresses"
   set_fact:
     mail: "{{ mail | combine({ 'to': list_of_mail_to }) }}"
@@ -30,11 +35,6 @@
     content: "New Docker update available"
     dest: /etc/ansible/templates/emails/main_template.html
   when: temp_type is defined and temp_type == "2"
-
-- name: Fail if template doesn't exist
-  fail:
-    msg: "ERROR: Template number: {{ temp_type }} doesn't exist!"
-  when: temp_type is defined and temp_type != 1 and temp_type != 2
 
 - name: Create an email without template
   copy:
