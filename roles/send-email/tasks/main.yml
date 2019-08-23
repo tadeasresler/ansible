@@ -19,9 +19,13 @@
 
 - name: Create an email template file
   copy:
-    content: "Test vlozeni<br><br>"
+    content: "Test vlozeni 1<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
   when: templates == 1
+  copy:
+    content: "Test vlozeni 2<br><br>"
+    dest: /etc/ansible/templates/emails/new_version.html
+  when: templates == 2
 
 - name: "Send out notifying e-mail to customers"
   mail:
