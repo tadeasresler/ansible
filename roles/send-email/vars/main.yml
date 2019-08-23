@@ -20,5 +20,5 @@
 
  mail_body:
     with_items:
-    subject: {{ subject }}
+    subject: "{{ subject }}"
     body: "{{ lookup('file', '/etc/ansible/templates/emails/new_version.html') }}"
