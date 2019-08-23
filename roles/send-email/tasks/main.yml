@@ -21,7 +21,7 @@
   copy:
     content: "Test vlozeni<br><br>"
     dest: /etc/ansible/templates/emails/new_version.html
-  when: templates is defined
+  when: templates == 1
 
 - name: "Send out notifying e-mail to customers"
   mail:
