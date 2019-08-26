@@ -24,7 +24,7 @@
   copy:
     content: "{{ message }}"
     dest: templates/main.html
-  when: temp_type is not defined or ()
+  when: temp_type is not defined or temp_type == ""
 
 #Structure of the notifying emails
 #Sending out the emails
