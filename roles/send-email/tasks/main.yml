@@ -2,21 +2,13 @@
 #Import check.yml
 - import_tasks: checks.yml
 
-#In case you want to send 'New version of MCC installed' email set "temp_type" on 2 in extra vars
+#In case you want to send some email template set "temp_type" on 2 in extra vars with the name of the template
 #Copying template for New version of MCC installed email to the main_template which is to be sent
-- name: Create an email template "New version of MCC installed"
+- name: Create an email template from "{{ se_temp_type }}".html
   template:
-    src: templates/new_version_mcc_installed.html
+    src: templates/"{{ se_temp_type }}".html
     dest: templates/main.html
-  when: se_temp_type == "new_version_mcc_installed"
-
-#In case you want to send 'Docker update availability email' set "temp_type" on 2 in extra vars
-#Copying template for docker update availability email to the main_template which is to be sent
-- name: Create an email template "New Docker update available"
-  template:
-    src: templates/docker_update_available.html
-    dest: templates/main.html
-  when: se_temp_type == "docker_update_available"
+  when: se_temp_type != ""
 
 #In case no template choosen you have to specify at least message in extra vars
 #Copying extra var 'message' to the main_template which is to be send
