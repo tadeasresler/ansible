@@ -26,7 +26,7 @@
 
 - name: List of templates
   debug:
-    msg: "{{ item.path }}"
+    msg: "{{ item.path }} zkouska"
   with_items: "{{ list_of_templates.files }}"
 
 - name: Recipients check
