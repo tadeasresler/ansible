@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_temp_type not in se_created_templates.stdout
+    "templates/new_version_mcc_installed.html" not in se_created_templates.stdout
 
 - name: Recipients check
   fail:
