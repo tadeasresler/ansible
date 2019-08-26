@@ -20,7 +20,7 @@
 
 - name: List of templates
   debug:
-    msg: {{ list_of_templates.files | map(attribute='path') | list }}
+    msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
 
 - name: Template check
   fail:
