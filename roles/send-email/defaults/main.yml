@@ -1,5 +1,6 @@
-# Definition of default vaules for variables
+---
 
+# Definition of default vaules for variables
 se_host: ""
 se_port: ""
 se_username: ""
@@ -7,14 +8,13 @@ se_password: ""
 se_secure: ""
 se_headers: ""
 se_subtype: ""
-se_recipients: ""
 se_from: ""
-se_subject: ""
 se_body: ""
 # se_cc: ""
 # se_bcc: ""
 
-#extra vars
-se_version: "" #whatever version number
+# Extra vars
 se_temp_type: "" #possible values: 'docker_update_available' or 'new_version_mcc_installed'
 se_message: "" #whatever short message you want to send. Possible to use HTML.
+se_recipients: ""
+se_subject: ""

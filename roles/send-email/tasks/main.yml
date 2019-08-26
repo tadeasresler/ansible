@@ -2,8 +2,7 @@
 #Import check.yml
 - import_tasks: checks.yml
 
-#In case you want to send some email template set "temp_type" on 2 in extra vars with the name of the template
-#Copying template for New version of MCC installed email to the main_template which is to be sent
+#Copying choosen template to the main template which is to be sent
 - name: Create an email template from {{ se_temp_type }}.html
   template:
     src: templates/{{ se_temp_type }}.html
@@ -29,8 +28,8 @@
     username: "{{ se_username }}"
     password: "{{ se_password }}"
     to: "{{ se_recipients }}"
-    # cc: "{{ se_cc }}"
-    # bcc: "{{ se_bcc }}"
+    # cc: "{{ se_cc }}" #uncomment and specify in extra vars if you want to cc anybody
+    # bcc: "{{ se_bcc }}" #uncomment and specify in extra vars if you want to bcc anybody
     from: "{{ se_from }}"
     headers: "{{ se_headers }}"
     secure: "{{ se_secure }}"
