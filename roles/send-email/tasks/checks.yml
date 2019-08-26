@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_created_templates.files is search('mcc')
+    se_temp_type not in se_created_templates.stdout
 
 - name: Recipients check
   fail:
