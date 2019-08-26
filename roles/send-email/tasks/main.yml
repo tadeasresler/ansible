@@ -14,7 +14,7 @@
 #Copying extra var 'message' to the main_template which is to be send
 - name: Create an email without template
   copy:
-    content: "{{ message }}"
+    content: "{{ se_message }}"
     dest: templates/main.html
   when: se_temp_type  == ""
 
