@@ -24,7 +24,7 @@
 
 - name: Template check
   fail:
-    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! Created templates are: "
+    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! Created templates are: {{ list_of_templates.files | map(attribute='path')"
   when:
     se_temp_type != "" and find_result.matched == 0
 
