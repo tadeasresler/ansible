@@ -25,11 +25,9 @@
     se_temp_type != "" and find_result.matched == 0
 
 - debug:
-    msg:
-      - "{{ item.path }}"
-      - Testing message
+    msg: "Test polozky: {{ item }}"
   with_items:
-    - "{{ list_of_templates.files }}"
+    - "{{ list_of_templates.files |map(attribute='path') |list }}"
 
 - name: Recipients check
   fail:
