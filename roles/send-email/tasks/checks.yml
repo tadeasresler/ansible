@@ -21,10 +21,12 @@
 - name: List of templates
   debug:
     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
+  when:
+    se_temp_type != "" and find_result.matched == 0  
 
 - name: Template check
   fail:
-    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! Created templates are: {{ list_of_templates.files | map(attribute='path') | list }}"
+    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! You can see list of available templates one task above."
   when:
     se_temp_type != "" and find_result.matched == 0
 
