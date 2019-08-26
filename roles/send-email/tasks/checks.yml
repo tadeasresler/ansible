@@ -27,7 +27,7 @@
 - debug:
     msg: "Test polozky: {{ item }}"
   with_items:
-    - "{{ list_of_templates.files |map(attribute='path') |list }}"
+    - "{{ list_of_templates |map(attribute='path') |list }}"
 
 - name: Recipients check
   fail:
