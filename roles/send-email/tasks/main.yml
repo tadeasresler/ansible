@@ -6,7 +6,7 @@
 #Copying template for New version of MCC installed email to the main_template which is to be sent
 - name: Create an email template from "{{ se_temp_type }}".html
   template:
-    src: templates/"{{ se_temp_type }}".html
+    src: templates/{{ se_temp_type }}.html
     dest: templates/main.html
   when: se_temp_type != ""
 
