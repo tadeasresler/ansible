@@ -11,7 +11,8 @@ se_recipients: ""
 se_from: ""
 se_subject: ""
 se_body: ""
-
+# se_cc: ""
+# se_bcc: ""
 
 #extra vars
 se_version: "" #whatever version number
