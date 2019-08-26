@@ -14,7 +14,7 @@
 
 - name: Template check
   fail:
-    msg: "ERROR: Stated template doesn't exist or it's not defined! Defined templates are: {{ se_created_templates }}"
+    msg: "ERROR: Stated template doesn't exist or it's not defined! Defined templates are: {{ se_created_templates | list }}"
   when:
     se_temp_type != "" and
     se_temp_type not in se_created_templates
