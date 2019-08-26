@@ -10,7 +10,7 @@
   find:
     paths: templates/
     patterns: '*{{ se_temp_type }}*'
-  register: se_created_templates
+    register: se_created_templates
 
 - name: Templates list
   debug:
