@@ -2,15 +2,9 @@
 
 - name: Message check
   fail:
-    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or se_temp_type='new_version_mcc_installed'"
+    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: se_message='Hello' or se_temp_type='new_version_mcc_installed'"
   when:
     se_temp_type == "" and se_message == ""
-
-- name: Find created template
-  find:
-    paths: templates/
-    patterns: '*{{ se_temp_type }}.html'
-  register: find_result
 
 - name: Find out all templates
   find:
@@ -23,7 +17,7 @@
   debug:
     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
 
-- name: Template check
+- name: Template name check
   fail:
     msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! You can see list of available templates one task above."
   when:
@@ -31,9 +25,9 @@
 
 - name: Recipients check
   fail:
-    msg: "ERROR: At least one recipient must by defined in extra vars! eg.: se_recipients='devops@aura.cz'"
+    msg: "ERROR: At least one recipient must by defined in extra vars! eg.: se_to='devops@aura.cz'"
   when:
-    se_recipients == ""
+    se_to == ""
 
 - name: Subject check
   fail:
