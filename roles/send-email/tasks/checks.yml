@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_created_templates.files.find(se_temp_type) == -1
+    se_created_templates.find(se_temp_type) == -1
 
 - name: Recipients check
   fail:
