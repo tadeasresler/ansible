@@ -18,16 +18,16 @@
     patterns: '*'
   register: list_of_templates
 
+- debug:
+    msg: "Test polozky: {{ item }}"
+  with_items:
+    - "{{ list_of_templates |map(attribute='path') |list }}"
+
 - name: Template check
   fail:
     msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! Created templates are: "
   when:
     se_temp_type != "" and find_result.matched == 0
-
-- debug: Debugujici zprava
-    msg: "Test polozky: {{ item }}"
-  with_items:
-    - "{{ list_of_templates |map(attribute='path') |list }}"
 
 - name: Recipients check
   fail:
