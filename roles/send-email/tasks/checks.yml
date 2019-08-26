@@ -9,12 +9,8 @@
 - name: Find created templates
   find:
     paths: templates/
-    patterns: '*/{{ se_temp_type }}.html'
+    patterns: '*{{ se_temp_type }}.html'
   register: se_created_templates
-
-- name: Templates list
-  debug:
-    msg: "{{ se_created_templates }} and template is supposed to be: {{ se_temp_type }}"
 
 - name: Template check
   fail:
