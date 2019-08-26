@@ -28,7 +28,7 @@
     port: "{{ se_port }}"
     username: "{{ se_username }}"
     password: "{{ se_password }}"
-    to: "{{ se_to }}"
+    to: "{{ se_recipients }}"
     cc: "{{ se_cc }}"
     bcc: "{{ se_bcc }}"
     from: "{{ se_from }}"
