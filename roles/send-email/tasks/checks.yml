@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_temp_type != "" and se_created_templates.files == ""
+    se_temp_type != "" and se_created_templates.files | lenght == "0"
 
 - name: Recipients check
   fail:
