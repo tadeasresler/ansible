@@ -28,12 +28,10 @@
     port: "{{ se_port }}"
     username: "{{ se_username }}"
     password: "{{ se_password }}"
-    to:
-      - "{{ se_recipients }}"
+    to: "{{ se_recipients | list }}"
     cc: "{{ se_cc }}"
     bcc: "{{ se_bcc }}"
     from: "{{ se_from }}"
-    headers:
-      - "{{ se_headers }}"
+    headers: "{{ se_headers | list }}"
     secure: "{{ se_secure }}"
     subtype: "{{ se_subtype }}"
