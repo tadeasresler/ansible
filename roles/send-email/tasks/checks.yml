@@ -9,7 +9,7 @@
 - name: Find created templates
   find:
     paths: templates/
-    patterns: '*.html'
+    patterns: '*'
   register: se_created_templates
 
 - name: Template check
