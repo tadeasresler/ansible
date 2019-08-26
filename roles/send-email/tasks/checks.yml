@@ -12,7 +12,7 @@
     patterns: '*{{ se_temp_type }}.html'
   register: find_result
 
-- name: List out all templates
+- name: Find out all templates
   find:
     paths: templates/
     patterns: '*'
