@@ -18,7 +18,7 @@
     patterns: '*'
   register: list_of_templates
 
-- name: List of available templates:
+- name: List of available templates
   debug:
     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
   when:
