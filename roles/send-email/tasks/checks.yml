@@ -6,17 +6,28 @@
   when:
     se_temp_type == "" and se_message == ""
 
-- name: Find created templates
+- name: Find created template
   find:
     paths: templates/
     patterns: '*{{ se_temp_type }}.html'
-  register: se_created_templates
+  register: find_result
+
+- name: List out all templates
+  find:
+    paths: templates/
+    patterns: '*'
+  register: list_of_templates
 
 - name: Template check
   fail:
-    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist!"
+    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! Created templates are: "
   when:
-    se_temp_type != "" and se_created_templates.matched == 0
+    se_temp_type != "" and find_result.matched == 0
+
+- name: List of templates
+  debug:
+    msg: "{{ list_of_templates.0 }} - {{ list_of_templates.3 }}"
+  with_indexed_items: "{{ list_of_templates }}"
 
 - name: Recipients check
   fail:
