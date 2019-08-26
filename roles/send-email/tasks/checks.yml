@@ -14,13 +14,13 @@
 
 - name: Templates list
   debug:
-    msg: "{{ se_created_templates.files }} and template is supposed to be: {{ se_temp_type }}"
+    msg: "{{ se_created_templates }} and template is supposed to be: {{ se_temp_type }}"
 
 - name: Template check
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_temp_type != "" and se_created_templates.files == "[]"
+    se_temp_type != "" and se_created_templates.files == ""
 
 - name: Recipients check
   fail:
