@@ -9,12 +9,12 @@
 - name: Find created templates
   find:
     paths: templates/
-    patterns: '*'
+    patterns: '*{{ se_temp_type }}*'
   register: se_created_templates
 
 - name: Templates list
   debug:
-    msg: "{{ se_created_templates.files | from_json }}"
+    msg: "{{ se_created_templates.files }}"
 
 - name: Template check
   fail:
