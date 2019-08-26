@@ -13,6 +13,13 @@
     excludes: '*main.html'
   register: list_of_templates
 
+- name: Find created template
+  find:
+    paths: templates/
+    patterns: '*{{ se_temp_type }}.html'
+    excludes: '*main.html'
+  register: is_template_available
+
 - name: List of available templates
   debug:
     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
@@ -21,7 +28,7 @@
   fail:
     msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! You can see list of available templates one task above."
   when:
-    se_temp_type != "" and find_result.matched == 0
+    se_temp_type != "" and is_template_available.matched == 0
 
 - name: Recipients check
   fail:
