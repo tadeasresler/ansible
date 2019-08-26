@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    se_created_templates.files | regex_search('(se_temp_type)') == ""
+    se_created_templates.files is search(se_temp_type)
 
 - name: Recipients check
   fail:
