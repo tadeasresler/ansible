@@ -12,9 +12,13 @@
     patterns: '*'
   register: se_created_templates
 
+- name: Templates list
+  debug:
+    msg: "{{ se_created_templates | list }}"
+
 - name: Template check
   fail:
-    msg: "ERROR: Stated template doesn't exist or it's not defined! Defined templates are: {{ se_created_templates | list }}"
+    msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
     se_temp_type != "" and
     se_temp_type not in se_created_templates
