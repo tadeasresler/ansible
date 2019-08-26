@@ -20,9 +20,7 @@
 
 - name: List of templates
   debug:
-    msg: "{{ item.path }}"
-  with_items:
-    - "{{ list_of_templates.files }}"
+    msg: {{ list_of_templates.files | map(attribute='path') | list }}
 
 - name: Template check
   fail:
