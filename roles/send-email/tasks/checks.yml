@@ -28,6 +28,7 @@
   debug:
     msg:
       - "{{ item.path }}"
+      - Testing message
   with_items:
     - "{{ list_of_templates.files }}"
 
