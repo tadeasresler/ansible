@@ -6,9 +6,9 @@
 #Copying template for New version of MCC installed email to the main_template which is to be sent
 - name: Create an email template "New version of MCC installed"
   template:
-    src: templates/new_version_mcc.html
+    src: templates/new_version_mcc_installed.html
     dest: templates/main.html
-  when: temp_type is defined and temp_type == "1"
+  when: se_temp_type == "new_version_mcc_installed"
 
 #In case you want to send 'Docker update availability email' set "temp_type" on 2 in extra vars
 #Copying template for docker update availability email to the main_template which is to be sent
@@ -16,7 +16,7 @@
   template:
     src: templates/docker_update_available.html
     dest: templates/main.html
-  when: temp_type is defined and temp_type == "2"
+  when: se_temp_type == "docker_update_available"
 
 #In case no template choosen you have to specify at least message in extra vars
 #Copying extra var 'message' to the main_template which is to be send
@@ -24,22 +24,22 @@
   copy:
     content: "{{ message }}"
     dest: templates/main.html
-  when: temp_type is not defined or temp_type == ""
+  when: se_temp_type  == ""
 
 #Structure of the notifying emails
 #Sending out the emails
 - name: "Sending notifying e-mails"
   mail:
-    subject: "{{ mail.subject }}"
-    body: "{{ mail.body | default(omit) }}"
-    host: "{{ mail.host | default(omit) }}"
-    port: "{{ mail.port | default(omit) }}"
-    username: "{{ mail.username | default(omit) }}"
-    password: "{{ mail.password | default(omit) }}"
-    to: "{{ mail.to | default(omit) }}"
-    cc: "{{ mail.cc | default(omit) }}"
-    bcc: "{{ mail.bcc | default(omit) }}"
-    from: "{{ mail.from | default(omit)}}"
-    headers: "{{ mail.headers | default(omit)}}"
-    secure: "{{ mail.secure | default(omit) }}"
-    subtype: "{{ mail.subtype | default(omit) }}"
+    subject: "{{ se_subject }}"
+    body: "{{ se_body }}"
+    host: "{{ se_host }}"
+    port: "{{ se_port }}"
+    username: "{{ se_username }}"
+    password: "{{ se_password }}"
+    to: "{{ se_to }}"
+    cc: "{{ se_cc }}"
+    bcc: "{{ se_bcc }}"
+    from: "{{ se_from }}"
+    headers: "{{ se_headers }}"
+    secure: "{{ se_secure }}"
+    subtype: "{{ se_subtype }}"

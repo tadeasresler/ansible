@@ -1,27 +1,25 @@
 ---
-- name: Template check
-  fail:
-    msg: "ERROR: Template number: {{ temp_type }} doesn't exist or it's not defined!"
-  when:
-    temp_type is defined and
-    temp_type not in ["","1", "2"]
 
 - name: Message check
   fail:
-    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or temp_type='1'"
+    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or se_temp_type='1'"
   when:
-    temp_type is not defined and
-    message is not defined
+    se_temp_type == "" and se_message == ""
+
+- name: Template check
+  fail:
+    msg: "ERROR: Stated template doesn't exist or it's not defined!"
+  when:
+    se_temp_type == ""
 
 - name: Recipients check
   fail:
-    msg: "ERROR: At least one recipient must by defined in extra vars! eg.: recipients='devops@aura.cz'"
+    msg: "ERROR: At least one recipient must by defined in extra vars! eg.: se_recipients='devops@aura.cz'"
   when:
-    recipients is not defined and
-    recipients !=""
+    se_recipients == ""
 
 - name: Subject check
   fail:
-    msg: "ERROR: Subject of the message must be defined in extra vars! eg.: subject='New version arrival!'"
+    msg: "ERROR: Subject of the message must be defined in extra vars! eg.: se_subject='New version arrival!'"
   when:
-    subject is not defined
+    se_subject = ""

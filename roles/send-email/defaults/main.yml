@@ -1,2 +1,20 @@
-#nadefinovat variables - defaults
-# prefix pro send-email roli je se_
+# Definition of default vaules for variables
+
+se_host: ""
+se_port: ""
+se_username: ""
+se_password: ""
+se_secure: ""
+se_headers: ""
+se_subtype: ""
+se_to: ""
+se_cc: ""
+se_bcc: ""
+se_from: ""
+se_subject: ""
+se_body: ""
+
+#extra vars
+se_version: ""
+se_temp_type: ""
+se_message: ""
