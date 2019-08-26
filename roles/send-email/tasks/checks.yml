@@ -18,10 +18,11 @@
     patterns: '*'
   register: list_of_templates
 
-- debug:
-    msg: "Test polozky: {{ item }}"
+- name: List of templates
+  debug:
+    msg: "{{ item.path }}"
   with_items:
-    - "{{ list_of_templates |map(attribute='path') |list }}"
+    - "{{ list_of_templates.files }}"
 
 - name: Template check
   fail:
