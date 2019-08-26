@@ -2,7 +2,7 @@
 
 - name: Message check
   fail:
-    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or se_temp_type='1'"
+    msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: message='Hello' or se_temp_type='new_version_mcc_installed'"
   when:
     se_temp_type == "" and se_message == ""
 
@@ -16,6 +16,7 @@
   find:
     paths: templates/
     patterns: '*'
+    excludes: '*main.html'
   register: list_of_templates
 
 - name: List of available templates
