@@ -18,11 +18,11 @@
     patterns: '*'
   register: list_of_templates
 
-- name: List of templates
+- name: List of available templates:
   debug:
     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
   when:
-    se_temp_type != "" and find_result.matched == 0  
+    se_temp_type != "" and find_result.matched == 0
 
 - name: Template check
   fail:
