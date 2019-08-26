@@ -9,7 +9,7 @@
 - name: Find created templates
   find:
     paths: templates/
-    patterns: '{{ se_temp_type }}'
+    patterns: '*{{ se_temp_type }}*'
   register: se_created_templates
 
 - name: Templates list
