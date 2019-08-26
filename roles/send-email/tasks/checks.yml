@@ -26,7 +26,7 @@
 
 - name: List of templates
   debug:
-    msg: "{{ list_of_templates.0 }} - {{ list_of_templates.3 }}"
+    msg: "{{ list_of_templates.path.0 }} - {{ list_of_templates.path.3 }}"
   with_indexed_items: "{{ list_of_templates }}"
 
 - name: Recipients check
