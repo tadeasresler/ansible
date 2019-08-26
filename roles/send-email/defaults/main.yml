@@ -15,6 +15,6 @@ se_subject: ""
 se_body: ""
 
 #extra vars
-se_version: ""
-se_temp_type: ""
-se_message: ""
+se_version: "" #whatever version number
+se_temp_type: "" #possible values: 'docker_update_available' or 'new_version_mcc_installed'
+se_message: "" #whatever short message you want to send. Possible to use HTML.
