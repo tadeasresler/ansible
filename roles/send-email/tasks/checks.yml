@@ -24,8 +24,7 @@
   when:
     se_temp_type != "" and find_result.matched == 0
 
-- name: List of templates
-  debug:
+- debug:
     msg:
       - "{{ item.path }}"
       - Testing message
