@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    '"templates/new_version_mcc_installed.html" not in se_created_templates.files'
+    '"templates/{{ se_temp_type }}.html" not in se_created_templates.files'
 
 - name: Recipients check
   fail:
