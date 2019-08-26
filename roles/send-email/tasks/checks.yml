@@ -9,7 +9,7 @@
 - name: Find created templates
   find:
     paths: templates/
-    patterns: '*{{ se_temp_type }}*'
+    patterns: '*/{{ se_temp_type }}.html'
   register: se_created_templates
 
 - name: Templates list
@@ -18,7 +18,7 @@
 
 - name: Template check
   fail:
-    msg: "ERROR: Stated template doesn't exist or it's not defined!"
+    msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist!"
   when:
     se_temp_type != "" and se_created_templates.matched == 0
 
