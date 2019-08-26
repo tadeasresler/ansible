@@ -14,7 +14,7 @@
 
 - name: Templates list
   debug:
-    msg: "{{ se_created_templates.files.stdout }} and template suppose to be: {{ se_temp_type }}"
+    msg: "{{ se_created_templates.stdout }} and template suppose to be: {{ se_temp_type }}"
 
 - name: Template check
   fail:
