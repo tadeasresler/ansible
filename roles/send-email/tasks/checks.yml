@@ -20,7 +20,7 @@
   fail:
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
-    'templates/"{{ se_temp_type }}".html not in se_created_templates.files'
+    se_created_templates.files | regex_search(se_temp_type) == ""
 
 - name: Recipients check
   fail:
