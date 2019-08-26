@@ -24,7 +24,7 @@
   when:
     se_temp_type != "" and find_result.matched == 0
 
-- debug:
+- debug: Debugujici zprava
     msg: "Test polozky: {{ item }}"
   with_items:
     - "{{ list_of_templates |map(attribute='path') |list }}"
