@@ -21,7 +21,7 @@
     msg: "ERROR: Stated template doesn't exist or it's not defined!"
   when:
     se_temp_type != "" and
-    se_temp_type not in se_created_templates
+    se_temp_type not in se_created_templates.files
 
 - name: Recipients check
   fail:
