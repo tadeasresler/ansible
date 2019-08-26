@@ -12,6 +12,7 @@ se_from: ""
 se_subject: ""
 se_body: ""
 
+
 #extra vars
 se_version: "" #whatever version number
 se_temp_type: "" #possible values: 'docker_update_available' or 'new_version_mcc_installed'
