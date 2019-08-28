@@ -33,4 +33,4 @@ In folder defaults are listed and defined all used variable except those used in
 #VARS
   main.yml
     Encrypted by ansible-vaul. Password to the ansible vault is in AURA's Bitwarden.
-    Consists of configuration settings and credentials.
+    Consists of configuration settings and credentials. Test
