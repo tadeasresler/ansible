@@ -3,8 +3,8 @@
 - name: Security check
   yum:
     list: installed
-  register: installed_packages
+  register: packages
 
 - name: List of installed packages
   debug:
-    msg: {{ installed_packages }}
+    msg: packages | list
