@@ -1,0 +1,7 @@
+# production hosts inventory
+
+[websrv]
+web1.example.com
+
+[dbsrv]
+db1.example.com

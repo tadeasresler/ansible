@@ -1,0 +1,7 @@
+# dev hosts inventory
+
+[websrv]
+dev.web1.example.com
+
+[dbsrv]
+dev.db1.example.com
