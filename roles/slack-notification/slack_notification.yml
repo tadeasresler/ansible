@@ -1,0 +1,7 @@
+---
+- name: Sending an information email to customer(s)
+  gather_facts: no
+  hosts: localhost
+
+  roles:
+  - slack-notification

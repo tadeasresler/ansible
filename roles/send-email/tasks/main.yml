@@ -17,32 +17,20 @@
     dest: templates/main.html
   when: se_temp_type  == ""
 
-#Structure of the notifying messages to Slack
-#Sending out the emails
-- name: Send notification message via Slack
-  slack:
-    token: 'T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad'
-    msg: "{{ se_slack_message }}"
-    channel: '#"{{ se_slack_channel }}"'
-    username: 'Ansible notifications'
-    parse: 'full'
-  delegate_to: localhost
-  when: se_send_to_slack == "1"
-
-#Structure of the notifying emails
-#Sending out the emails
-# - name: "Sending notifying e-mails"
-#   mail:
-#     subject: "{{ se_subject }}"
-#     body: "{{ se_body }}"
-#     host: "{{ se_host }}"
-#     port: "{{ se_port }}"
-#     username: "{{ se_username }}"
-#     password: "{{ se_password }}"
-#     to: "{{ se_to }}"
-#     # cc: "{{ se_cc }}" #uncomment and specify in extra vars if you want to cc anybody
-#     # bcc: "{{ se_bcc }}" #uncomment and specify in extra vars if you want to bcc anybody
-#     from: "{{ se_from }}"
-#     headers: "{{ se_headers }}"
-#     secure: "{{ se_secure }}"
-#     subtype: "{{ se_subtype }}"
+Structure of the notifying emails
+Sending out the emails
+- name: "Sending notifying e-mails"
+  mail:
+    subject: "{{ se_subject }}"
+    body: "{{ se_body }}"
+    host: "{{ se_host }}"
+    port: "{{ se_port }}"
+    username: "{{ se_username }}"
+    password: "{{ se_password }}"
+    to: "{{ se_to }}"
+    # cc: "{{ se_cc }}" #uncomment and specify in extra vars if you want to cc anybody
+    # bcc: "{{ se_bcc }}" #uncomment and specify in extra vars if you want to bcc anybody
+    from: "{{ se_from }}"
+    headers: "{{ se_headers }}"
+    secure: "{{ se_secure }}"
+    subtype: "{{ se_subtype }}"

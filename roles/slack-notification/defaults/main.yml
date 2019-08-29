@@ -1,0 +1,5 @@
+---
+
+# Extra vars for slack notification
+sl_message: ""
+sl_channel: ""
