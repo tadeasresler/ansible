@@ -1,4 +1,4 @@
-How to use send-email roles
+How to use slack-notification
 
 #EXAMPLE
 

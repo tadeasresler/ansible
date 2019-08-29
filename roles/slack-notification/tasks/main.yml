@@ -6,9 +6,9 @@
 #Sending out the emails
 - name: Send notification message via Slack
   slack:
-    token: 'T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad'
-    msg: "{{ se_slack_message }}"
-    channel: '#"{{ se_slack_channel }}"'
-    username: 'Ansible notifications'
+    token: "{{ slack_token }}"
+    msg: "{{ slack_message }}"
+    channel: '#"{{ slack_channel }}"'
+    username: '"{{ slack_username }}"'
     parse: 'none'
   delegate_to: localhost
