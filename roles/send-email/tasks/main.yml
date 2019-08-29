@@ -18,9 +18,9 @@
   when: se_temp_type  == "" and se_send_to_slack == "1"
 
 - name: Slack notification
-  shell: curl -X POST -H 'Content-type: application/json' --data '{"text":"{{ se_message }}"}' https://hooks.slack.com/services/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
+  command: curl -X POST -H 'Content-type: application/json' --data '{"text":"{{ se_message }}"}' https://hooks.slack.com/services/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
   when: se_send_to_slack == 1
-  
+
 #Structure of the notifying emails
 #Sending out the emails
 - name: "Sending notifying e-mails"
