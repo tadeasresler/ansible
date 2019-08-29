@@ -2,7 +2,7 @@ How to use send-email roles
 
 #EXAMPLE
 
-  ansible-playbook notification_email.yml -e "se_subject='Message subject' se_message='<b>Simple HTML message</b>' se_to='Mr. James Bond <james.bond@example.cz>' se_temp_type='docker_update_available' se_version='5.15.01'" --ask-vault-pass
+  ansible-playbook notification_email.yml -e "se_subject='Message subject' se_message='<b>Simple HTML message</b>' se_to='Mr. James Bond <james.bond@example.cz>' se_temp_type='docker_update_available' env='PRODUCTION'" --ask-vault-pass
 
 You are supposed to play notification_email.yml playbook in the role folder. The extra vars are:
   - se_subject='Subject of the message'
