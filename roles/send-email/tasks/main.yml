@@ -21,7 +21,7 @@
 #Sending out the emails
 - name: Send notification message via Slack all options
   slack:
-    token: 'https://hooks.slack.com/services/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'
+    token: 'T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad'
     msg: 'Ahoj'
     channel: '#slacknotificationtesting'
     # thread_id: 1539917263.000100
