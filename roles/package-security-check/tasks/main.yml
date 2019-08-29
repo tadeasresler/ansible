@@ -3,6 +3,8 @@
 - name: Security check
   yum:
     list: installed
+    security: yes
+    state: present
   register: packages
 
 - name: List of installed packages
