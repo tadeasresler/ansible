@@ -13,7 +13,8 @@ You are supposed to play notification_email.yml playbook in the role folder. The
 
 #TIPS and TRICKS
   1) When you play the playbook it gives you list of available templates
-  2) the --ask-vault-pass can be replaced by -–vault-password-file path_to_the_file and you don't need to state the password for encryption anymore.  
+  2) the --ask-vault-pass can be replaced by -–vault-password-file path_to_the_file and you don't need to state the password for encryption anymore.
+  3) password to ansible-vault is on AURA's Bitwarden  
 
 #DEFAULTS
 In folder defaults are listed and defined all used variable except those used in templates. Those ones must be defined only in extra vars to be notified when their definition is missing
