@@ -9,4 +9,4 @@
 
 - name: List of installed packages
   debug:
-    msg: "{{ packages | list }}"
+    msg: "{{ packages.results | list }}"
