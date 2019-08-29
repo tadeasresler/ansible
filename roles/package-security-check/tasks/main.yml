@@ -2,9 +2,9 @@
 # tasks file for package-security-check
 - name: Security check
   yum:
-    list: installed
+    list: available
     security: yes
-    state: present
+    state: latest
   register: packages
 
 - name: List of installed packages
