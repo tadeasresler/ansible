@@ -1,4 +1,4 @@
 ---
-updateOption: security
+updateOption: minimal-security-severity:Critical
 emailTo: admin@example.com
 connectTo: mail.example.com
