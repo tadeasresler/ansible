@@ -7,4 +7,4 @@
 
 - name: List of installed packages
   debug:
-    msg: installed_packages
+    msg: {{ installed_packages }}
