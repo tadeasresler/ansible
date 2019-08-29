@@ -1,0 +1,7 @@
+---
+- name: Checking the vulnerabilities of installed packages
+  gather_facts: no
+  hosts: localhost
+
+  roles:
+  - package-security-check
