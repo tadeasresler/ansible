@@ -15,19 +15,16 @@
   copy:
     content: "{{ se_message }}"
     dest: templates/main.html
-  when: se_temp_type  == "" and se_send_to_slack == ""
+  when: se_temp_type  == ""
 
 #Structure of the notifying messages to Slack
 #Sending out the emails
-- name: Send notification message via Slack all options
+- name: Send notification message via Slack
   slack:
     token: 'T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad'
-    msg: 'Ahoj'
-    channel: '#slacknotificationtesting'
-    # thread_id: 1539917263.000100
+    msg: {{ se_slack_message }}
+    channel: '#{{ se_slack_channel }}'
     username: 'Ansible notifications'
-    # icon_url: http://www.example.com/some-image-file.png
-    # link_names: 0
     parse: 'full'
   delegate_to: localhost
   when: se_send_to_slack == "1"

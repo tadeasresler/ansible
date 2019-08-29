@@ -13,8 +13,12 @@ se_body: ""
 # se_cc: ""
 # se_bcc: ""
 
-# Extra vars
+# Extra vars for email
 se_temp_type: "" #possible values: 'docker_update_available' or 'new_version_mcc_installed'
 se_message: "" #whatever short message you want to send. Possible to use HTML.
 se_to: ""
 se_subject: ""
+
+# Extra vars for slack notification
+se_slack_message: ""
+se_slack_channel: ""

@@ -1,10 +1,16 @@
 ---
 
-- name: Message check
+- name: Email message check
   fail:
     msg: "ERROR: Message or template of the message must be defined in extra vars! eg.: se_message='Hello' or se_temp_type='new_version_mcc_installed'"
   when:
     se_temp_type == "" and se_message == ""
+
+- name: Slack message check
+  fail:
+    msg: "ERROR: When want to send a message to the slack you have to state at least se_slack_channel and se_slack_message."
+  when:
+    se_send_to_slack == "1" and (se_slack_channel == "" or se_slack_message == "")
 
 - name: Find out all templates
   find:
