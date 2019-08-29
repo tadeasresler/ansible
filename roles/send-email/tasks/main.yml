@@ -22,8 +22,8 @@
 - name: Send notification message via Slack
   slack:
     token: 'T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad'
-    msg: {{ se_slack_message }}
-    channel: '#{{ se_slack_channel }}'
+    msg: "{{ se_slack_message }}"
+    channel: '#"{{ se_slack_channel }}"'
     username: 'Ansible notifications'
     parse: 'full'
   delegate_to: localhost
