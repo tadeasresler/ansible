@@ -15,10 +15,21 @@
   copy:
     content: "{{ se_message }}"
     dest: templates/main.html
-  when: se_temp_type  == "" and se_send_to_slack == "1"
+  when: se_temp_type  == "" and se_send_to_slack == ""
 
-- name: Slack notification
-  command: curl -X POST -H "Content-type: application/json" --data '{"text":"{{ se_message }}"}' https://hooks.slack.com/services/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
+#Structure of the notifying messages to Slack
+#Sending out the emails
+- name: Send notification message via Slack all options
+  slack:
+    token: 'LkeFOneTvqgg8nODzNoKMFPU'
+    msg: 'Ahoj'
+    channel: '#slacknotificationtesting'
+    # thread_id: 1539917263.000100
+    username: 'Ansible notifications'
+    # icon_url: http://www.example.com/some-image-file.png
+    # link_names: 0
+    parse: 'full'
+  delegate_to: localhost
   when: se_send_to_slack == 1
 
 #Structure of the notifying emails
