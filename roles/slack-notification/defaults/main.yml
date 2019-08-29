@@ -1,5 +1,6 @@
 ---
 
 # Extra vars for slack notification
-sl_message: ""
-sl_channel: ""
+slack_message: ""
+slack_channel: ""
+slack_username: ""
