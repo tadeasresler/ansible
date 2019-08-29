@@ -1,5 +1,0 @@
----
-updateOption: minimal-security-severity:Critical
-emailTo: admin@example.com
-emailFrom: test@example.com
-connectTo: mail.example.com

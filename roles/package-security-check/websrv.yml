@@ -1,6 +1,0 @@
----
-- hosts: websrv
-  roles:
-    - common
-  remote_user: root
-

@@ -1,5 +1,0 @@
----
-- hosts: dbsrv
-  roles:
-    - common
-  remote_user: root
