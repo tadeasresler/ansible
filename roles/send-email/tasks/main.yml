@@ -17,8 +17,8 @@
     dest: templates/main.html
   when: se_temp_type  == ""
 
-Structure of the notifying emails
-Sending out the emails
+#Structure of the notifying emails
+#Sending out the emails
 - name: "Sending notifying e-mails"
   mail:
     subject: "{{ se_subject }}"
