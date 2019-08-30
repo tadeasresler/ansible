@@ -1,0 +1,662 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="generator" content="PSPad editor, www.pspad.com">
+        <title>
+        </title>
+    </head>
+    <body>
+        <p>Dear Ahmad,
+        </p>
+        <p>we have released a new version of MC CATALOGUE. You can find the guide how to update MC CATALOGUE below.
+        </p>
+        <p>---------------------------------------------------------------------------------------
+        </p>
+        <p>Use the following URL for downloading MC CATALOGUE Standard&nbsp;5.09.04
+        </p>
+        <p>
+            <a href="https://mcc-files.aura.cz/UAE" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://mcc-files.aura.cz/UAE&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFESuyNUlIsPmdkLOQbVIsAh_de2w">https://mcc-files.aura.cz/UAE</a>&nbsp;<br /><br />Password:huWGyHgX12
+        </p>
+        <p>File:<strong>mcc50904-aest.zip</strong>
+        </p>
+        <p>---------------------------------------------------------------------------------------
+        </p>
+        <p><br /><strong>Instructions to update MC CATALOGUE from version&nbsp;5.09.03 to version&nbsp;5.09.04</strong>
+        </p>
+        <p>Note: this update cannot be used for older versions than 5.04.18
+        </p><h1>TEST &amp; TRAINING ENVIRONMENT</h1>
+        <p><strong>0. Check file system free space:</strong><br /><strong><br />Server&nbsp;
+                <a href="http://mcc-test.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://mcc-test.uaencb.ae&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFbTVp5LorhvrNIxBDbStBs6OpfaQ">mcc-test.uaencb.ae</a><br /></strong>Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://mcc-test.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://mcc-test.uaencb.ae&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFbTVp5LorhvrNIxBDbStBs6OpfaQ">mcc-test.uaencb.ae</a></strong>&nbsp;(192.168.10.55) as user mcc<strong><br /></strong>Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /><br /></strong>
+            <em>/ (free space should be more than 5GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aura (free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/export/home (free space should be more than 10GB - you can free some space by deleting old installation sources in&nbsp;
+            </em>
+            <em>/export/home/mcc/install-
+                <wbr />sources)
+            </em><strong><br /></strong>
+        </p>
+        <p>&nbsp;
+        </p>
+        <p><br /><strong>1. Download and unzip file from AURA file server to some directory on MCC application server (
+                <a href="http://mcc-test.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://mcc-test.uaencb.ae&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFbTVp5LorhvrNIxBDbStBs6OpfaQ">mcc-test.uaencb.ae</a>)<br /></strong><br />Using&nbsp;<strong>WINSCP&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://mcc-test.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://mcc-test.uaencb.ae&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFbTVp5LorhvrNIxBDbStBs6OpfaQ">mcc-test.uaencb.ae</a></strong>&nbsp;( 192.168.10.55) as user&nbsp;<strong>mcc</strong><br />Unzip file&nbsp;<strong>mcc50904-aest.zip</strong> into&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/
+            </em>2018-10-16_5.09.04-AE-
+            <wbr />update (verify that file /export/home/mcc/install-
+            <wbr />sources/2018-10-16_5.09.04-AE-
+            <wbr />update/install/setup exists)
+        </p>
+        <p><br /><strong>2.Execute SETUP:&nbsp;</strong><br /><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://mcc-test.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://mcc-test.uaencb.ae&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFbTVp5LorhvrNIxBDbStBs6OpfaQ">mcc-test.uaencb.ae</a></strong>&nbsp;(192.168.10.55) as user&nbsp;<strong>mcc</strong><br /><br />To start the setup execute command:<br /><br /><strong>sh&nbsp;</strong><strong>/export/home/mcc/install-
+                <wbr />sources/</strong><strong>
+                <em>2018-10-16_5.09.04-AE-
+                    <wbr />update
+                </em>/install/setup</strong><br /><br />Follow all instructions provided by the setup:<br /><br /><br /><strong>2A. Choose which application to update:</strong><br /><br />
+            <em>MCC SETUP
+            </em>
+            <em><br />
+            </em>
+            <em>----------------
+            </em>
+            <em><br />
+            </em>
+        </p>
+        <p>
+            <em>Enter number 1 to update MCC in folder: /aura
+            </em>
+            <em>/mcc-test/aura-skelet
+            </em><br />
+            <em>Enter number 2 to update MCC in folder: /aura/mcc-schilda/aura-skelet
+            </em><br />
+            <em>Enter number 3 to update MCC in folder: /aura/mcc-train/aura-skelet<br />Enter number 4 to update MCC in folder: /aura/mcc-tir/aura-skelet<br />
+            </em>
+            <em>or enter full path to AURA_HOME (the path where you want to update MCC - for example /aura/mcc-test/aura-skelet):
+            </em><br /><br />To update for example MCC Test application:<br />Enter number 1and press Enter<br /><br />
+        </p>
+        <p><strong>2B. Email configuration</strong>
+        </p>
+        <p>Setup will ask you for email configuration:
+        </p>
+        <p>
+            <img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=7c21e7ae7a&amp;attid=0.1.1&amp;permmsgid=msg-f:1614398938342367681&amp;th=16677f47edaa21c1&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ9DvmGmjpNEb8AiZwXHPAHY3MzrAGmnPsPQURxeIOz1PogjVm9Ocb76l6jG5Zz80G7okWUGi9Q0rELNMeu4DaoHXDPGP7TIC1ORu_1kj1jXfVRIXMO7B6A4byY&amp;disp=emb" alt="" data-image-whitelisted="" />
+        </p>
+        <p>Enter "no" to disable this feature.
+        </p>
+        <p><br /><strong>2C. Stop MCC if running</strong><br />If MCC is running, setup will ask you for stopping it:<br /><br />
+            <em>MCC is running and must be stopped before starting the update, would you like to stop it? Y[es]/N[o]
+            </em><br /><br />Press "y" to disable and stop MC CATALOGUE<br /><br /><strong>2D. BACKUP</strong><strong><br /></strong>
+            <em>MCC is stopped
+            </em>
+            <em><br />
+            </em>
+            <em>In case of updating production system, we recommend to perform backup of the fo
+            </em>
+            <em>llowing now:
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC database
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC workspaces in&nbsp;
+            </em>
+            <em>/aura/mcc-test/aura-skelet/
+                <wbr />mcc/workspaces (you can exclude&nbsp;
+            </em>
+            <em>/aura/mcc-test/aura-skelet/
+                <wbr />mcc/workspaces/var/nmcrlindex)
+            </em>
+            <em><br />
+            </em>
+            <em>Would you like start MCC update process for MCC installation in&nbsp;
+            </em>
+            <em>/aura
+            </em>
+            <em>/mcc-test/aura-skelet
+            </em>
+            <em>? Y[es]/N[o]
+            </em><br /><br />We can skip database and workspace backup for Test &amp; Training environment.<br />Enter "y" to continue the update.<br /><br /><strong>2E. MCC UPDATE process<br /><br /></strong>Setup will automatically update:
+        </p>
+        <ul>
+            <li>MCC Skeleton
+            </li>
+            <li>Apache Tomcats
+            </li>
+            <li>JAVA
+            </li>
+            <li>mcc.yaml configuration file
+            </li>
+            <li>MCC war and jar files
+            </li>
+            <li>MCC database
+            </li>
+        </ul>
+        <p>After the successful update you will get the following message:<br /><br />
+            <em>MCC Update process has finished
+            </em>
+            <em><br />
+            </em>
+            <em>Before starting MCC we recommend to check values in mcc.yaml file located in:
+            </em>
+            <em><br />
+            </em>
+            <em>/aura/mcc-test/aura-skelet/
+            </em>
+            <em>mcc
+                <wbr />/conf/mcc.yaml
+            </em>
+            <em><br />
+            </em>
+            <em><br />
+            </em>
+            <em>Would you like to start MCC now? Y[es]/N[o]
+            </em>
+        </p>
+        <p>Press "Y"
+        </p><h2><strong>3. MC CATALOGUE URL Check</strong></h2>
+        <p>Open the following URL to check if all modules and services are running after the update:<br /><br />MCC TEST application:&nbsp;
+            <a href="https://mcc-test.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://mcc-test.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNECeyvsCjtAxpRfxewS6KW8q0nwXg">https://mcc-test.uaencb.ae/
+                <wbr />mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br />MCC SCHILDA application:&nbsp;
+            <a href="https://mcc-schilda.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://mcc-schilda.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNF-pyaVEv2p-efBsfjn77b5Wfedpw">https://mcc-schilda.uaencb.ae/
+                <wbr />mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br />MCC TIR application:&nbsp;
+            <a href="https://mcc-tir.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://mcc-tir.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNFkvWcw8kTwo9TM1N-6cJCt73NRJg">https://mcc-tir.uaencb.ae/mcc/
+                <wbr />faces/public/ApplicationCheck.
+                <wbr />xhtml</a><br />MCC TRAIN application:&nbsp;
+            <a href="https://mcc-train.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://mcc-train.uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682909000&amp;usg=AFQjCNEgONRyP9ksayfts-uyeXf6e7DxeQ">https://mcc-train.uaencb.ae/
+                <wbr />mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br /><br />------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />---------------
+        </p><h2>PRE-DEPLOY ENVIRONMENT</h2>
+        <p><strong>0. Check file system free space:</strong><br /><strong><br />Server tarmeez-</strong><strong>predeploy-
+                <a href="http://a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNE_DIvV5ve2AwEWfGodiMY41HZxsw">a.uaencb.ae</a><br /></strong>Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>tarmeez-</strong><strong>predeploy-
+                <a href="http://a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNE_DIvV5ve2AwEWfGodiMY41HZxsw">a.uaencb.ae</a></strong>&nbsp;(155.121.70.35) as user mcc<strong><br /></strong>Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /><br /></strong>
+            <em>/ (free space should be more than 5GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aura (free space should be more than 10GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aurashare (free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/export/home (free space should be more than 5GB - you can free some space by deleting old installation sources in&nbsp;
+            </em>
+            <em>/export/home/mcc/install-
+                <wbr />sources)
+            </em><strong><br /><br /></strong>------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />-------<br /><strong>Server tarmeez-</strong><strong>predeploy-
+                <a href="http://b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEnc78abUi0HWaGRXRzIh7RG2YIHg">b.uaencb.ae</a><br /></strong>Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>tarmeez-</strong><strong>predeploy-
+                <a href="http://b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEnc78abUi0HWaGRXRzIh7RG2YIHg">b.uaencb.ae</a></strong>&nbsp;(155.121.70.36) as user mcc<strong><br /></strong>Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /><br /></strong>
+            <em>/ (free space should be more than 5GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aura (free space should be more than 10GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aurashare (free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/export/home (free space should be more than 5GB - you can free some space by deleting old installation sources in&nbsp;
+            </em>
+            <em>/export/home/mcc/install-
+                <wbr />sources)
+            </em><strong><br /></strong><br /><br /><strong>1. Download and unzip file from AURA file server to some directory on MCC application servers in cluster (</strong>&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a>&nbsp;+&nbsp;</strong><strong>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a></strong><strong>)<br /></strong><br />Using&nbsp;<strong>WINSCP&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a></strong>&nbsp;(155.121.70.35) as user&nbsp;<strong>mcc</strong><br />Create folder&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em><br />Unzip file&nbsp;<strong>mcc50904-aest.zip</strong> into&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em> (verify that file /export/home/mcc/install-
+            <wbr />sources/2018-10-16_5.09.04-AE-
+            <wbr />update/install/setup exists)<br /><br />Using&nbsp;<strong>WINSCP&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a></strong>&nbsp;(155.121.70.36) as user&nbsp;<strong>mcc</strong><br />Create folder&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em><br />Unzip file&nbsp;<strong>mcc50904-aest.zip</strong> into&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em> (verify that file /export/home/mcc/install-
+            <wbr />sources/2018-10-16_5.09.04-AE-
+            <wbr />update/install/setup exists)<br /><br /><br /><strong>2. Execute SETUP on&nbsp;</strong><strong>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a>&nbsp;:&nbsp;</strong><br /><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a></strong>&nbsp;(155.121.70.35) as user&nbsp;<strong>mcc</strong><br /><br />Execute command:<br /><br /><strong>sh&nbsp;</strong><strong>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/install/setup</strong><br /><br /><br />Follow all instructions provided by the setup:<br /><br /><br /><strong>2A. Choose which application to update:</strong><br /><br />
+            <em>MCC SETUP
+            </em>
+            <em><br />
+            </em>
+            <em>----------------
+            </em>
+            <em><br />
+            </em>
+            <em>Enter number 1 to update MCC in folder: /aura
+            </em>
+            <em>/mcc-predeploy/aura-
+                <wbr />skelet<br />
+            </em>
+            <em>or enter full path to AURA_HOME (the path where you want to update MCC - for example&nbsp;
+            </em>
+            <em>/aura/mcc-predeploy/aura-
+                <wbr />skelet):
+            </em><br /><br />Enter number 1and press Enter<br /><br />
+        </p>
+        <p><strong>2B. Email configuration</strong>
+        </p>
+        <p>Setup will ask you for email configuration:
+        </p>
+        <p>
+            <img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=7c21e7ae7a&amp;attid=0.1.1&amp;permmsgid=msg-f:1614398938342367681&amp;th=16677f47edaa21c1&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ-1QqzdbPXPMVT5hjwAJahRk4X49yHggNsu5_rp4IIoj9jsd9Xb6VnfsdgdWBy0WIOxMdbJG3DtEFp5zMtTP3CDQs1iXjotKM-8JT8sSfFmRk6IUel4n-uWzxQ&amp;disp=emb" alt="" data-image-whitelisted="" />
+        </p>
+        <p>Enter "no" to disable this feature.
+        </p>
+        <p><br /><strong>2C. Stop MCC if running</strong><br />
+            <em>MC CATALOGUE HA configuration found<br /> - remote host:
+            </em>&nbsp;
+            <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a>
+            <em><strong><br /></strong> user: mcc<br /> port: 22<br /> - verifying if HA services are down<br /> - Local service mccha is running<br /> - Local service msgbroker is running<br /> - Remote service mccha is running<br /> - Remote service msgbroker is running<br />Some services are running<br />Would you like to disable them and stop MC CATALOGUE? [y/N]<br />
+            </em><br />Press "y" to disable and stop MC CATALOGUE on both servers (To stop MCC can take more than 5 minutes)<br /><br /><strong>2D. BACKUP</strong><strong><br /></strong>
+            <em>MCC is stopped
+            </em>
+            <em><br />
+            </em>
+            <em>In case of updating production system, we recommend to perform backup of the fo
+            </em>
+            <em><br />
+            </em>
+            <em>llowing now:
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC database
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC workspaces in&nbsp;
+            </em>
+            <em>/aura
+            </em>
+            <em>/mcc-predeploy/aura-
+                <wbr />skelet
+            </em>
+            <em>/mcc/workspaces (you can exclude&nbsp;
+            </em>
+            <em>/aura/mcc-predeploy/aura-
+                <wbr />skelet/mcc/workspaces/var/
+                <wbr />nmcrlindex)
+            </em>
+            <em><br />
+            </em>
+            <em>Would you like start MCC update process for MCC installation in&nbsp;
+            </em>
+            <em>/aura
+            </em>
+            <em>/mcc-predeploy/aura-
+                <wbr />skelet
+            </em>
+            <em>? Y[es]/N[o]
+            </em><br /><br />We can skip database and workspace backup for pre-deploy environment.<br />Enter "y" to continue the update.<br /><br /><strong>2E. MCC UPDATE process<br /><br /></strong>Setup will automatically update:
+        </p>
+        <ul>
+            <li>MCC Skeleton
+            </li>
+            <li>Apache Tomcats
+            </li>
+            <li>JAVA
+            </li>
+            <li>mcc.yaml configuration file
+            </li>
+            <li>MCC war and jar files
+            </li>
+            <li>MCC database
+            </li>
+        </ul>
+        <p>After the successful update you will get the following message:<br /><br />
+            <em>MCC Update process has finished<br />Before starting MCC we recommend to check values in mcc.yaml file located in:<br />
+            </em>
+            <em>/aura/mcc-predeploy/aura-
+                <wbr />skelet/mcc/conf/mcc.yaml<br /><br />MCC is configured in HA<br />Notice: Do not start MCC before node&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a>&nbsp;is updated!<br />Would you like to start MCC on localhost and remote host&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a>? Y[es]/N[o]<br />
+            </em>
+            <em><br />Press&nbsp;
+            </em>"n" to cancel starting MC CATALOGUE<br /><br /><br /><strong>3. MCC UPDATE on server&nbsp;</strong><strong>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a><br /><br /></strong>Repeat the same procedure from step 2 for server:&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a></strong>&nbsp;(155.121.70.36)<br /><br />After the successful update on server&nbsp;<strong>
+                <a href="http://tarmeez-predeploy-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH4Mtx8ApM3a8W_EEbUd8jeNIyh_w">tarmeez-predeploy-b.uaencb.ae</a>&nbsp;</strong>you can start MC CATALOGUE:<strong><br /><br /></strong>
+            <em>MCC Update process has finished<br />Before starting MCC we recommend to check values in mcc.yaml file located in:<br />
+            </em>
+            <em>/aura/mcc-predeploy/aura-
+                <wbr />skelet/mcc/conf/mcc.yaml<br /><br />MCC is configured in HA<br />Notice: Do not start MCC before node&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a>&nbsp;is updated!<br />Would you like to start MCC on localhost and remote host&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-predeploy-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-predeploy-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEBekPO__91otJjLvxQ8PgX18eY-A">tarmeez-predeploy-a.uaencb.ae</a>? Y[es]/N[o]<br />
+            </em>
+            <em><br />Press&nbsp;
+            </em>"y" to to enable and start MC CATALOGUE on both cluster nodes<br /><br /><br /><strong>4. MC CATALOGUE URL Check</strong><br /><br />Open the following URL to check if all modules and services are running after the update:<br /><br />The both URLs should work:<br /><br /><a>https://</a>tarmeez-predeploy-a.
+            <a href="http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEKXWka5UHIrpqnNNS4ms7ow-Z3Ww">ua
+                <wbr />encb.ae/mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br /><a>https://</a>tarmeez-predeploy-b.
+            <a href="http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEKXWka5UHIrpqnNNS4ms7ow-Z3Ww">ua
+                <wbr />encb.ae/mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br /><br /><br /><br />
+        </p><h2>PRODUCTION ENVIRONMENT</h2>
+        <p><strong>0. Check file system free space:</strong><br /><strong><br />Server&nbsp;
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEESQY5030aDj2sRJciRUUNC1IFSg">tarmeez-a.uaencb.ae</a><br /></strong>Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNEESQY5030aDj2sRJciRUUNC1IFSg">tarmeez-a.uaencb.ae</a></strong>&nbsp;(155.121.70.31) as user mcc<strong><br /></strong>Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /><br /></strong>
+            <em>/ (free space should be more than 5GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aura (free space should be more than 10GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aurashare (free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/export/home (free space should be more than 5GB - you can free some space by deleting old installation sources in&nbsp;
+            </em>
+            <em>/export/home/mcc/install-
+                <wbr />sources)
+            </em><strong><br /><br /></strong>------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />--------------------<br /><strong>Server&nbsp;
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH2kbD8ESrA_teTMCqaB3ubd2h-TQ">tarmeez-b.uaencb.ae</a><br /></strong>Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNH2kbD8ESrA_teTMCqaB3ubd2h-TQ">tarmeez-b.uaencb.ae</a></strong>&nbsp;(155.121.70.32) as user mcc<strong><br /></strong>Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /><br /></strong>
+            <em>/ (free space should be more than 5GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aura (free space should be more than 10GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/aurashare (free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em>/export/home (free space should be more than 5GB - you can free some space by deleting old installation sources in&nbsp;
+            </em>
+            <em>/export/home/mcc/install-
+                <wbr />sources)
+            </em><strong><br /><br /></strong>------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />--------------------<br /><strong>Server&nbsp;</strong><strong>
+                <a href="http://tarmeez-db-prod-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-db-prod-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNGkkYAcdMFxYt_VwCU3OPmxzn2RGA">tarmeez-db-prod-a.uaencb.ae</a></strong><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to ORACLE database server&nbsp;<strong>
+                <a href="http://tarmeez-db-prod-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-db-prod-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNGkkYAcdMFxYt_VwCU3OPmxzn2RGA">tarmeez-db-prod-a.uaencb.ae</a>&nbsp;</strong>as user&nbsp;<strong>oracle</strong><br />Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /></strong>
+            <em>/ (free space should be more than 50GB)
+            </em>
+            <em><br />/u01&nbsp;
+            </em>
+            <em>(free space should be more than 50GB&nbsp;
+            </em>
+            <em>- you can free some space by deleting old dump files .DMP&nbsp;in&nbsp;
+            </em>
+            <em>/u01/app/oracle/product/11.2.
+                <wbr />0/db_1/rdbms/log/)
+            </em>
+            <em><br />
+            </em>
+            <em>/u02&nbsp;
+            </em>
+            <em>(free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em><br />
+            </em>------------------------------
+            <wbr />------------------------------
+            <wbr />------------------------------
+            <wbr />--------------------<br /><strong>Server&nbsp;</strong><strong>
+                <a href="http://tarmeez-db-prod-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-db-prod-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNHwTlu11128JSdwCgE7MW7m8ZPErg">tarmeez-db-prod-b.uaencb.ae</a></strong><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to ORACLE database server&nbsp;<strong>
+                <a href="http://tarmeez-db-prod-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-db-prod-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682910000&amp;usg=AFQjCNHwTlu11128JSdwCgE7MW7m8ZPErg">tarmeez-db-prod-b.uaencb.ae</a>&nbsp;</strong>as user&nbsp;<strong>oracle</strong><br />Execute command:<strong><br /></strong>df -h<br />Verify free space for the following file systems:<strong><br /></strong>
+            <em>/ (free space should be more than 50GB)
+            </em>
+            <em><br />/u01&nbsp;
+            </em>
+            <em>(free space should be more than 50GB&nbsp;
+            </em>
+            <em>- you can free some space by deleting old dump files .DMP&nbsp;in&nbsp;
+            </em>
+            <em>/u01/app/oracle/product/11.2.
+                <wbr />0/db_1/rdbms/log/)
+            </em>
+            <em><br />
+            </em>
+            <em>/u02&nbsp;
+            </em>
+            <em>(free space should be more than 50GB)
+            </em>
+            <em><br />
+            </em>
+            <em><br />
+            </em><br /><br /><strong>1. Download and unzip file from AURA file server to some directory on MCC application servers in cluster (</strong><strong>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a>&nbsp;+&nbsp;
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a></strong><strong>)<br /></strong><br />Using&nbsp;<strong>WINSCP&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a></strong>&nbsp;(155.121.70.31) as user&nbsp;<strong>mcc</strong><br />Create folder&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em><br />Unzip file&nbsp;<strong>mcc50904-aest.zip</strong> into&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em> (verify that file /export/home/mcc/install-
+            <wbr />sources/2018-10-16_5.09.04-AE-
+            <wbr />update/install/setup exists)<br /><br />Using&nbsp;<strong>WINSCP&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a></strong>&nbsp;(155.121.70.32) as user&nbsp;<strong>mcc</strong><br />Create folder&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em><br />Unzip file&nbsp;<strong>mcc50904-aest.zip</strong> into&nbsp;
+            <em>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/
+            </em> (verify that file /export/home/mcc/install-
+            <wbr />sources/2018-10-16_5.09.04-AE-
+            <wbr />update/install/setup exists)<br /><br /><br /><strong>2. Execute SETUP on&nbsp;</strong><strong>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a>&nbsp;:&nbsp;</strong><br /><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to server&nbsp;<strong>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a></strong>&nbsp;(155.121.70.31) as user&nbsp;<strong>mcc</strong><br /><br />Execute command:<br /><br /><strong>sh&nbsp;</strong><strong>/export/home/mcc/install-
+                <wbr />sources/2018-10-16_5.09.04-AE-
+                <wbr />update/install/setup</strong><br /><br /><br />Follow all instructions provided by the setup:<br /><br /><br /><strong>2A. Choose which application to update:</strong><br /><br />
+            <em>MCC SETUP
+            </em>
+            <em><br />
+            </em>
+            <em>----------------
+            </em>
+            <em><br />
+            </em>
+            <em>Enter number 1 to update MCC in folder: /aura
+            </em>
+            <em>/mcc-production/aura-
+                <wbr />skelet<br />
+            </em>
+            <em>or enter full path to AURA_HOME (the path where you want to update MCC - for example&nbsp;
+            </em>
+            <em>/aura/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet):
+            </em><br /><br />Enter number 1and press Enter<br /><br />
+        </p>
+        <p><strong>2B. Email configuration</strong>
+        </p>
+        <p>Setup will ask you for email configuration:
+        </p>
+        <p>
+            <img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=7c21e7ae7a&amp;attid=0.1.1&amp;permmsgid=msg-f:1614398938342367681&amp;th=16677f47edaa21c1&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ_figj01ejPG-1fLcL3neVAl6axUzzaN9aH5rJXUmqY9IlI2H8KWDxPed8X6b6WCBL5EZsNvOzFI8PSxhcJutsaig3JKZHmOutWPA-Te_nzyhMh_tjtrnkzkn4&amp;disp=emb" alt="" data-image-whitelisted="" />
+        </p>
+        <p>Enter "no" to disable this feature.
+        </p>
+        <p><br /><strong>2C. Stop MCC if running</strong><br />
+            <em>MC CATALOGUE HA configuration found<br /> - remote host:
+            </em>&nbsp;
+            <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a>
+            <em><strong><br /></strong> user: mcc<br /> port: 22<br /> - verifying if HA services are down<br /> - Local service mccha is running<br /> - Local service msgbroker is running<br /> - Remote service mccha is running<br /> - Remote service msgbroker is running<br />Some services are running<br />Would you like to disable them and stop MC CATALOGUE? [y/N]<br />
+            </em><br />Press "y" to disable and stop MC CATALOGUE on both servers (To stop MCC can take more than 5 minutes)<br /><br /><strong>2D. BACKUP</strong><strong><br /></strong>
+            <em>MCC is stopped
+            </em>
+            <em><br />
+            </em>
+            <em>In case of updating production system, we recommend to perform backup of the fo
+            </em>
+            <em><br />
+            </em>
+            <em>llowing now:
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC database
+            </em>
+            <em><br />
+            </em>
+            <em>&nbsp;- MCC workspaces in&nbsp;
+            </em>
+            <em>/aura
+            </em>
+            <em>/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet
+            </em>
+            <em>/mcc/workspaces (you can exclude&nbsp;
+            </em>
+            <em>/aura/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet/mcc/workspaces/var/
+                <wbr />nmcrlindex)
+            </em>
+            <em><br />
+            </em>
+            <em>Would you like start MCC update process for MCC installation in&nbsp;
+            </em>
+            <em>/aura
+            </em>
+            <em>/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet
+            </em>
+            <em>? Y[es]/N[o]
+            </em><br /><br />Before starting the update perform MC CATALOGUE Production database backup using ORACLE Data Pump:<br /><br />Using&nbsp;<strong>PUTTY&nbsp;</strong>login to ORACLE database server&nbsp;<strong>
+                <a href="http://tarmeez-db-prod-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-db-prod-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFvh_sbEvOJoVErrSlABFO5QD9NLg">tarmeez-db-prod-a.uaencb.ae</a>&nbsp;(run the backup on this server only)&nbsp;</strong>as user&nbsp;<strong>oracle<br /></strong>Execute the following command to backup MC CATALOGUE PRODUCTION database:<br /><br />
+            <em>expdp system/
+            </em>
+            <em>AURAmcc123@
+            </em>
+            <em>
+                <a href="http://tarmeezutf8.uaencb.ae/tarmeez" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeezutf8.uaencb.ae/tarmeez&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNHFMr3i7bd6dTykkQ_RjqYHZ769oA">tarmeezutf8.
+                    <wbr />uaencb.ae/tarmeez</a>&nbsp;schemas=
+            </em>
+            <em>AECPOOMST001 dumpfile=
+            </em>
+            <em>AECPOOMST001_50903_20
+                <wbr />18-10-16.DMP<br />
+            </em><br /><strong>Backup workspace</strong>&nbsp;folder using command (the backup will be created in /export/home/mcc/install-
+            <wbr />sources/backup/):<br />tar -cvzf /export/home/mcc/install-
+            <wbr />sources/backup/workspace-`date '+%y-%m-%d'`.tgz /aurashare/workspaces/PROD<br /><br />After the sucessfull backup, enter "y" to continue the update.<br /><br /><strong>2E. MCC UPDATE process<br /><br /></strong>Setup will automatically update:
+        </p>
+        <ul>
+            <li>MCC Skeleton
+            </li>
+            <li>Apache Tomcats
+            </li>
+            <li>JAVA
+            </li>
+            <li>mcc.yaml configuration file
+            </li>
+            <li>MCC war and jar files
+            </li>
+            <li>MCC database
+            </li>
+        </ul>
+        <p>After the successful update you will get the following message:<br /><br />
+            <em>MCC Update process has finished<br />Before starting MCC we recommend to check values in mcc.yaml file located in:<br />
+            </em>
+            <em>/aura/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet/mcc/conf/mcc.yaml<br /><br />MCC is configured in HA<br />Notice: Do not start MCC before node&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a>&nbsp;is updated!<br />Would you like to start MCC on localhost and remote host&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a>? Y[es]/N[o]<br />
+            </em>
+            <em><br />Press&nbsp;
+            </em>"n" to cancel starting MC CATALOGUE<br /><br /><br /><strong>3. MCC UPDATE on server&nbsp;</strong><strong>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a><br /><br /></strong>Repeat the same procedure from step 2 for server:&nbsp;<strong>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a></strong>&nbsp;(155.121.70.32)<br /><br />You can skip the database backup (step 2C).<br /><br />After the successful update on server&nbsp;<strong>
+                <a href="http://tarmeez-b.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-b.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNFf0IjijuRiPyiccytBpV-Rh52jyQ">tarmeez-b.uaencb.ae</a>&nbsp;</strong>you can start MC CATALOGUE:<strong><br /><br /></strong>
+            <em>MCC Update process has finished<br />Before starting MCC we recommend to check values in mcc.yaml file located in:<br />
+            </em>
+            <em>/aura/mcc-
+            </em>
+            <em>production/aura-
+                <wbr />skelet/mcc/conf/mcc.yaml<br /><br />MCC is configured in HA<br />Notice: Do not start MCC before node&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a>&nbsp;is updated!<br />Would you like to start MCC on localhost and remote host&nbsp;
+            </em>
+            <em>
+                <a href="http://tarmeez-a.uaencb.ae/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://tarmeez-a.uaencb.ae&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNErhy17QkZGyt9D-4aHM-IApc080w">tarmeez-a.uaencb.ae</a>? Y[es]/N[o]<br />
+            </em>
+            <em><br />Press&nbsp;
+            </em>"y" to to enable and start MC CATALOGUE on both cluster nodes<br /><br /><br /><strong>4. MC CATALOGUE URL Check</strong><br /><br />Open the following URL to check if all modules and services are running after the update:<br /><br />The both URLs should work:<br /><br /><a>https://</a>tarmeez-a.
+            <a href="http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNGgLAJJTO39zRnti3MKvWzp3FFNPA">uaencb.ae/
+                <wbr />mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br /><a>https://</a>tarmeez-b.
+            <a href="http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://uaencb.ae/mcc/faces/public/ApplicationCheck.xhtml&amp;source=gmail&amp;ust=1567231682911000&amp;usg=AFQjCNGgLAJJTO39zRnti3MKvWzp3FFNPA">uaencb.ae/
+                <wbr />mcc/faces/public/
+                <wbr />ApplicationCheck.xhtml</a><br /><br /><br />Do not hesitate to contact us via email
+            <a href="mailto:mccsupport@aura.cz">mccsupport@aura.cz</a>&nbsp;in case of any questions.
+        </p>
+    </body>
+</html>
