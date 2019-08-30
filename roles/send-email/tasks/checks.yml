@@ -14,13 +14,13 @@
     excludes: '*main.html'
   register: list_of_templates
 
-- name: Find created template
-  find:
-    paths: templates/
-    recurse: yes
-    patterns: '*{{ se_temp_type }}.html'
-    excludes: '*main.html'
-  register: is_template_available
+# - name: Find created template
+#   find:
+#     paths: templates/
+#     recurse: yes
+#     patterns: '*{{ se_temp_type }}.html'
+#     excludes: '*main.html'
+#   register: is_template_available
 
 - name: List of available templates
   debug:
@@ -30,7 +30,7 @@
   fail:
     msg: "ERROR: Stated template {{ se_temp_type }}.html doesn't exist! You can see list of available templates one task above. State just a name of the template file without sufix."
   when:
-    se_temp_type != "" and is_template_available.matched == 0
+    se_temp_type != "" #and is_template_available.matched == 0
 
 - name: Recipients check
   fail:
