@@ -9,6 +9,7 @@
 - name: Find out all templates
   find:
     paths: templates/
+    recurse: yes
     patterns: '*'
     excludes: '*main.html'
   register: list_of_templates
@@ -16,6 +17,7 @@
 - name: Find created template
   find:
     paths: templates/
+    recurse: yes
     patterns: '*{{ se_temp_type }}.html'
     excludes: '*main.html'
   register: is_template_available
