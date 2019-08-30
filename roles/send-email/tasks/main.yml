@@ -5,7 +5,7 @@
 #Copying choosen template to the main template which is to be sent
 - name: Create an email template from {{ se_temp_type }}.html
   template:
-    src: templates/{{ se_temp_type }}.html
+    src: {{ se_temp_type }}.html
     dest: templates/main.html
   when: se_temp_type != ""
 
