@@ -8,7 +8,7 @@
 
 - name: Find out all templates
   find:
-    paths: templates/
+    paths: ../roles/send-email/templates/
     recurse: yes
     patterns: '*'
     excludes: '*main.html'
