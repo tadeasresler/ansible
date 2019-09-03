@@ -22,9 +22,9 @@
 #     excludes: '*main.html'
 #   register: is_template_available
 
-- name: List of available templates
-  debug:
-    msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
+# - name: List of available templates
+#   debug:
+#     msg: "{{ list_of_templates.files | map(attribute='path') | list }}"
 
 # - name: Template name check
 #   fail:
