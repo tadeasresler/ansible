@@ -6,13 +6,13 @@
   when:
     se_temp_type == "" and se_message == ""
 
-- name: Find out all templates
-  find:
-    paths: ../send-email/templates/
-    recurse: yes
-    patterns: '*'
-    excludes: '*main.html'
-  register: list_of_templates
+# - name: Find out all templates
+#   find:
+#     paths: ../send-email/templates/
+#     recurse: yes
+#     patterns: '*'
+#     excludes: '*main.html'
+#   register: list_of_templates
 
 # - name: Find created template
 #   find:
