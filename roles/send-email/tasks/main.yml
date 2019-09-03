@@ -6,7 +6,7 @@
 - name: Create an email template from {{ se_temp_type }}.html
   template:
     src: '{{ se_temp_type }}.html'
-    dest: templates/main.html
+    dest: ../send-email/templates/main.html
   when: se_temp_type != ""
 
 #In case no template choosen you have to specify at least message in extra vars
@@ -14,7 +14,7 @@
 - name: Create an email without template
   copy:
     content: "{{ se_message }}"
-    dest: templates/main.html
+    dest: ../send-email/templates/main.html
   when: se_temp_type  == ""
 
 #Structure of the notifying emails
