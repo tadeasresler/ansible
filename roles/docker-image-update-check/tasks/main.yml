@@ -48,13 +48,10 @@
 - name: Send notification message via Slack or Email
   vars:
     slack_message: "New update for docker image {{ item.item }} is available!"
-    slack_channel: "slacknotificationtesting"
+    slack_channel: "dockerimageupdates"
     slack_username: "Docker Updates"
-    # se_temp_type: "docker_update_available" #possible values are shown during execution'
-    # se_to: "tadeas.resler@aura.cz"
-    # se_subject: "New docker version for {{ item.item }} is available"
+    slack_token: "T145LBQGJ/BMUK33E2C/h2cOENxbkbYlktlbSMNFNzad"
   include_role:
     name: slack-notification
-    # - name: send-email
   when: item.changed == 1
   loop: "{{ diff_output.results }}"
