@@ -1,6 +1,6 @@
 ---
 
-# Definition of default vaules for variables
+# Definition of default vaules for variables_
 se_host: ""
 se_port: ""
 se_username: ""
